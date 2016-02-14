@@ -1,0 +1,12 @@
+$for(posts)$
+	<article class="post-block">
+		<div class="post-content">
+			<a href="$url$">$title$</a> - $date$
+			<div>
+				$if(teaser)$
+					$teaser$
+				$endif$
+			</div>
+		</div>
+	</article>
+$endfor$
