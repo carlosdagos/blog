@@ -100,7 +100,7 @@ One of my mistakes, and probably yours too, at some point, is when we start conf
 - `encoding`: A table that the machine uses to map numbers to glyphs.
 - `glyphs`: Combinations of lines, colors, and other artistic resources stored somewhere in your machine. Your brain sees them and makes an interpretation of it.
 
-### Back to rotating a string
+### Back to reversing a string
 
 So let's go back to that simple, seemingly innocuous question that started this whole mess...
 
@@ -120,7 +120,7 @@ That's more like it! Getting to be a little bit clearer!
 
 ### Multibyte strings
 
-So am I to write, during an interview, a funtion that will somehow determine that I must grab a number of bytes from a string and place them all together at the front of the new string? Has php forsaken me? Does php NOT support emojis? Then how the hell does Facebook allow me to place the [2015 word of the year](http://time.com/4114886/oxford-word-of-the-year-2015-emoji/)? "😂😂😂😂"
+So am I to write, during an interview, a function that will somehow determine that I must grab a number of bytes from a string and place them all together at the front of the new string? Has php forsaken me? Does php NOT support emojis? Then how the hell does Facebook allow me to place the [2015 word of the year](http://time.com/4114886/oxford-word-of-the-year-2015-emoji/)? "😂😂😂😂"
 
 Fret not. PHP supports your emojis. In fact, since a `string` is an array of `char`, and therefore an array of bytes, then it supports any string, in any encoding. **All you have to do is know what encoding you're working with**! This is paramount in _any_ application you're working. Know your encoding. [Do it](/images/didyoudoit.jpg).
 
