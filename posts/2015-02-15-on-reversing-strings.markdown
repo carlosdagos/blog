@@ -89,7 +89,7 @@ So those last four bytes tell me something about a "f09fa494", since I got no id
 
 ### Back to `char`
 
-So by now we know that php is not treating my favorite emoji like a `char`. Along this post we've seen that adding it to strings is just giving us headaches. It's not just this emoji, either, but characters contained in another one of my all time favorites: (╯°□°）╯︵ ┻━┻.
+So by now we know that php is not treating my favorite emoji like a single `char` (i.e.: a single byte). Along this post we've seen that adding it to strings is just giving us headaches. It's not just this emoji, either, but characters contained in another one of my all time favorites: (╯°□°）╯︵ ┻━┻.
 
 #### Let's stop using the wrong words here...
 
