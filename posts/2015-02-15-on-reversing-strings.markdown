@@ -2,6 +2,8 @@
 title: On reversing strings 
 ---
 
+_This article may not display 100% correct on your computer, some glyphs may be missing._
+
 One time, during an interview I was asked:
 
 <div class="tip">
@@ -218,6 +220,12 @@ And that's it. We're done, go ace, at least, this interview question. Or apply i
 - [Everything Unicode](http://unicode.org/)
 - [Grapheme clusters](http://unicode.org/reports/tr29/)
 - [PHP Intl Reference](http://php.net/manual/en/book.intl.php)
+
+## Listening to...
+
+<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6b4l8rVWImW1hkCshXichu" width="640" height="400" frameborder="0" allowtransparency="true"></iframe>
+
+_¿Qué puedo hacer...? :)_
 
 ## Footnotes
 
