@@ -47,7 +47,7 @@ Broken characters. And in the last example we even get a DIFFERENT character? wt
 
 ### What the hell is a "string" anyway?
 
-If you're a Comp Sci Major, you'd probably say "why, an array of `char`, of course 🤔". And yes, you're right. Except no. Not in php, as in php it's a scalar value, and if you don't believe me then test it on your own using [`is_scalar`](http://php.net/is_scalar) function in php. However for this purpose, since we're using `$string{$i}`[^access], then let's say that it is.
+If you're a Comp Sci Major, you'd probably say "why, an array of `char`, of course 🤔🤓". And yes, you're right. Except no. Not in php, as in php it's a scalar value, and if you don't believe me then test it on your own using [`is_scalar`](http://php.net/is_scalar) function in php. However for this purpose, since we're using `$string{$i}`[^access], then let's say that it is.
 
 I'm not going to get into what a `char` is at this point. But if you're a Comp Sci Major you've probably heard someone say, at some point, "a `char` fits into a byte!". So we work with that.
 
@@ -164,7 +164,7 @@ If you highlight the last line, you can see that it didn't rotate the Swiss flag
 
 ... frustrating, isn't it? :D
 
-Well, basically what happened is that the guys at [Unicode](http://unicode.org/) didn't want any fire coming the whole subject of ["who has a flag, who doesn't have a flag..."](http://unicode.org/reports/tr51/#Flags). So they came up with a clever way of staying out geopolitical issues. Basically, [there are ways of representing flags according to their regional indicators](http://unicode.org/reports/tr51/#def_emoji_flag_sequence). So CH is Switzerland, AR is Argentina, DE is Germany, and.. yeah, you get it. Country-ISO-2 codes. Clever guys, them guys at Unicode.
+Well, basically what happened is that the guys at [Unicode](http://unicode.org/) didn't want any fire coming the whole subject of ["who has a flag, who doesn't have a flag..."](http://unicode.org/reports/tr51/#Flags). So they came up with a clever way of staying out geopolitical issues. Basically, [there are ways of representing flags according to their regional indicators](http://unicode.org/reports/tr51/#def_emoji_flag_sequence). So CH is Switzerland, AR is Argentina, DE is Germany, and.. yeah, you get it. Country-ISO-2 codes. Clever guys, them guys at Unicode. They did a similar thing with emoji that vary in skin color, so you get `[ClappingHands][SkinTone]`... and bullets are dodged.
 
 But it sucks, because [now there's a whole new range of glyphs I can't reverse using my new `mb`-based functions!](http://stackoverflow.com/questions/35197952/reliably-rotating-any-string)
 
