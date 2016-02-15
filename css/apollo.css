@@ -222,6 +222,9 @@ table thead th {
 table tbody tr:nth-child(2n) {
     background-color: #eee
 }
+.gist table tbody tr:nth-child(2n) {
+		background-color: transparent 
+}
 table tbody td {
     padding: 5px
 }
