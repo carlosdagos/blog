@@ -355,6 +355,34 @@ header .nav-list-item a {
     background-color: #f66;
     font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
 }
+.post-content .quote {
+    position: relative;
+    margin: 2em 0;
+    padding: 12px 24px 12px 30px;
+    border-left: 4px solid #4284F4;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #f8f8f8
+}
+.post-content .quote br {
+    display: none
+}
+.post-content .quote:before {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    content: "”";
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: 300;
+    text-align: center;
+    background-color: #4284F4;
+    font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+}
 code,
 pre {
     font-size: 0.8em;
