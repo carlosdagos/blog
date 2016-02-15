@@ -33,7 +33,7 @@ Let's start by looking at the request in parts.
 
 	1) I must write 🤔
 	2) I have one (1) input, and it's of type "string"
-	3) I have one (1) output, and it's of type "string", but it's a reversed 
+	3) I have one (1) output, and it's of type "string", but it's reversed 
 
 Seemingly I complied with everything.. Until I go a test the next code...
 
@@ -53,7 +53,7 @@ Let's look at the following string.
 
 And let's run some `str` functions over it, like [`strlen`](http://php.net/strlen), [`substr`](http://php.net/substr), and [`str_split`](http://php.net/str_split).
 
-Before we get any code, let's thing about what out output should be. 
+Before we get any code, let's think about what that output should be. 
 
 Let's count `char`s...
 
@@ -79,7 +79,7 @@ Well, the code is not wrong, bro/sis. Because if it was, then geniuses like [Sar
 
 Indeed, in the context of php a `char` is a byte. And php is treating everything it sees inside that string as an array of `char`, and every position is being returned correctly.
 
-But look at that last part of having ran the `str_split`. There's four characters there (25-28) and I have no idea what that is. It _should_ be 🤔. But it's not. So let's take my super haxxor powers and see what's in there in the most haxxor format available: HEXIDECIMAL. I shall then use my ol' trusty [`bin2hex`](http://php.net/bin2hex) function.
+But look at that last part of having ran the `str_split`. There's four characters there (25-28) and I have no idea what that is. It _should_ be 🤔. But it's not. So let's take my super haxxor powers and see what's in there in the most haxxor format available: HEXADECIMAL. I shall then use my ol' trusty [`bin2hex`](http://php.net/bin2hex) function.
 
 <script src="https://gist.github.com/charlydagos/2b000273d39731541984.js"></script>
 
@@ -170,14 +170,38 @@ This is why UTF-8 became famous in the first place[^5], it successfully leverage
 
 So just because we encountered some "upper-bound" glyph, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^6], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html). 
 
+So then, grapheme clusters, you say?
+
 ### Finally a solution!
+
+Again, the world is full of smart people, and [they've done something for us already](http://php.net/manual/en/ref.intl.grapheme.php).
+
+So we got something implemented for us already. I could cry of excitement!
+
+<div class="tip">
+**HOLD IT!** First install the `intl` package as best as you can. For me it's running `brew install php70-intl`. It takes a bit, because we're dealing with dependencies, and dependencies suck.
+</div>
+
+<script src="https://gist.github.com/charlydagos/74a53789d26796a0510c.js"></script>
+
+And, at long last...
+
+<script src="https://gist.github.com/charlydagos/a7211ca7ead7a179494a.js"></script>
 
 ## Lessons
 
+I've learned that this is a very complicated subject, for sure.
+
+I've learned that this simple, seemingly innocuous question is not a "stand up and solve it now"-style of question, but rather one that should yield a conversation with your potential employer. Ask them exactly what they mean, what they want, and let them know that you can hold your own when it comes to encodings :)
+
+Reflecting upon it, I've seen many stacks using stantard `str`-based functions in low level layers, and that they may be potentially returning the wrong values. Think about it, I've been using emojis throughout this blog post because they've become so commonplace that we *expect* software to accept them, when they don't we get pissed! At least _I do!_. But the "problem" doesn't limit itself to emojis. By ignoring these types of things, you're making your software unusable to certain users, and in the end you're losing money. Your product is less valuable than the one made by guys and gals who *do* support Japanese, Czech, Hungarian, etc, characters. Those who made that communication platform that supports emojis can now market their product with a bit more... *pizzazz*. 
+
+The problem is **far, far** more reaching than your code. You'll encounter issues starting on your clients' devices, then hitting your web servers, then your applications, then your storage layers... It's a tremendous task, so keep that in mind next time someone sends you a funny pic on Whatsapp and you reply with a simple "😂😂😂", think about the genius work that it took before those three glyphs could show up on your screen and be sent to your mates :)
+
 ## Considerations
 
-- Performance:
-- i18n:
+- Performance: It's quite intuitive, but for the sake of completeness just skim over [the file that implements `grapheme`-based functions](https://github.com/cataphract/PECL-intl/blob/master/grapheme/grapheme_string.c). This means that you **should not** _always_ use these, **because they're slower**. Nor should you _always_ use `mb`-based functions. Rather, think about the context of the code you're writing, and think about what makes sense where.
+- i18n: If you want your software to be even mildly international, plan for these types of things! 
 
 ### Resources and more reading
 
@@ -185,6 +209,7 @@ So just because we encountered some "upper-bound" glyph, doesn't mean that we've
 - [Extended explanation on encodings](http://kunststube.net/encoding/)
 - [Everything Unicode](http://unicode.org/)
 - [Grapheme clusters](http://unicode.org/reports/tr29/)
+- [PHP Intl Reference](http://php.net/manual/en/book.intl.php)
 
 ## Footnotes
 
@@ -193,3 +218,4 @@ So just because we encountered some "upper-bound" glyph, doesn't mean that we've
 [^3]: Sorry, Windows, I'll not attend to you for now.
 [^4]: I had to type these out since they were pretty much invisible.
 [^5]: You would know this already, if you [had read](/images/didyoudoit.jpg) that [Joel Spolsky link](www.joelonsoftware.com/articles/Unicode.html) I left above on character encodings.
+[^6]: Even my `vim` editor is starting to choke at this point.
