@@ -132,7 +132,7 @@ So am I to write, during an interview, a function that will somehow determine th
 
 Fret not. PHP supports your emojis. In fact, since a `string` is an array of `char`, and therefore an array of bytes, then it supports any string, in any encoding. **All you have to do is know what encoding you're working with**! This is paramount in _any_ application you're working. Know your encoding. [Do it](/images/didyoudoit.jpg).
 
-Most of the time your encoding will be the encoding defined in your system. You can go ahead and try this now in your favourite Linux distro, or OSX[^windows], `echo $LC_ALL`. For me, it's `en_US.UTF-8`, which unsurprisingly is what our previous Google search told us about 🤔 and "f09fa494".
+Most of the time your encoding will be the encoding defined in your system. You can go ahead and try this now in your favourite Linux distro, or OS X[^windows], `echo $LC_ALL`. For me, it's `en_US.UTF-8`, which unsurprisingly is what our previous Google search told us about 🤔 and "f09fa494".
 
 In PHP you can also do `echo getenv('LC_ALL');`
 
