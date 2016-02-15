@@ -6,8 +6,8 @@ _This article may not display 100% correct on your computer, some glyphs may be 
 
 One time, during an interview I was asked:
 
-<div class="tip">
-"Write a function that given a string input will output a reversed version of the input"
+<div class="quote">
+Write a function that given a string input will output a reversed version of the input
 </div>
 
 "Simple enough", I thought naively. So I very confidently wrote
@@ -24,13 +24,13 @@ Right?
 
 ## Not so..
 
-So this where maybe the prefix "naive\_" makes sense for the gists up there. You see, the question is NOT "can you iterate over a string and generate a new one?". What they wanted to see if I knew how the language I chose (in this case, php) handles encodings. [Because encodings are very important](http://www.joelonsoftware.com/articles/Unicode.html)[^joel].
+So this where maybe the prefix "naive\_" makes sense for the gists up there. You see, the question is NOT "can you iterate over a string and generate a new one?". What they wanted to see is if I knew how the language I chose (in this case, php) handles encodings. [Because encodings are very important](http://www.joelonsoftware.com/articles/Unicode.html)[^joel].
 
 ### Why am I naive?
 
 Let's start by looking at the request in parts.
 
-<div class="tip">
+<div class="quote">
 	"Write a function that given a string input will output a reversed version of the input"
 	 ------(1)-------      --------(2)---------      -----------------(3)------------------
 
@@ -43,13 +43,13 @@ Seemingly I complied with everything.. Until I go a test the next code...
 
 <script src="https://gist.github.com/charlydagos/5fcd07990e57f412d301.js"></script>
 
-Broken characters. And in the last example we even get a DIFFERENT character? wtf? :(
+Broken characters. And in the last example we even get a DIFFERENT character? wtf?
 
 ### What the hell is a "string" anyway?
 
 If you're a Comp Sci Major, you'd probably say "why, an array of `char`, of course 🤔🤓". And yes, you're right. Except no. Not in php, as in php it's a scalar value, and if you don't believe me then test it on your own using [`is_scalar`](http://php.net/is_scalar) function in php. However for this purpose, since we're using `$string{$i}`[^access], then let's say that it is.
 
-I'm not going to get into what a `char` is at this point. But if you're a Comp Sci Major you've probably heard someone say, at some point, "a `char` fits into a byte!". So we work with that.
+I'm not going to get into what a `char` is at this point. But if you're a Comp Sci Major you've probably heard someone say, at some point, "a `char` fits into a byte!". This is not always true, [but in php this is the case](http://www.phpinternalsbook.com/zvals/basic_structure.html).
 
 Let's look at the following string.
 
@@ -112,16 +112,16 @@ One of my mistakes, and probably yours too, at some point, is when we start conf
 
 So let's go back to that simple, seemingly innocuous question that started this whole mess...
 
-<div class="tip">
-"Write a function that given a string input will output a reversed version of the input"
+<div class="quote">
+Write a function that given a string input will output a reversed version of the input
 </div>
 
 Tricky, tricky, tricky question.
 
 So... what _are_ we being asked here? I suppose that a regular interviewer would at the very least expect you to not return broken characters. Right? So let's rephrase the question a little bit, because the way that it's formulated is a bit tricky. Let's be honest: we *did* reverse the string, as per the definition of a `string` as "an array of bytes". If we reversed the array, then we reversed the string. But no, because it's returning broken stuff, so let's say the next thing:
 
-<div class="tip">
-"Write a function that given a string input will output a reversed version of glyphs"
+<div class="quote">
+Write a function that given a string input will output a reversed version of glyphs
 </div>
 
 That's more like it! Getting to be a little bit clearer! 
