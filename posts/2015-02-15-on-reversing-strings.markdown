@@ -98,7 +98,7 @@ One of my mistakes, and probably yours too, at some point, is when we start conf
 - `char`: A byte, contains a number, interpreted by the machine according to some encoding.
 - `string`: An array of bytes.
 - `encoding`: A table that the machine uses to map numbers to glyphs.
-- `glyphs`: Lines, colors, and other artistic resources stored somewhere in your machine. Your brain sees them and makes an interpretation of it.
+- `glyphs`: Combinations of lines, colors, and other artistic resources stored somewhere in your machine. Your brain sees them and makes an interpretation of it.
 
 ### Back to rotating a string
 
