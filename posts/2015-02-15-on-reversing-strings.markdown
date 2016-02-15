@@ -176,7 +176,7 @@ So our family of `mb` functions isn't going to cut it if we want to reverse glyp
 
 This is why UTF-8 became famous in the first place[^doit], it successfully leveraged ASCII fanatics (looking at you, people from the US) with all of us foreigners with our á and ê and ç characters that confuse the living shit out of people who've never left their hometown of Sandy, Utah.
 
-So just because we encountered some "upper-bound" glyph, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^vim], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html). 
+So just because we encountered these glyphs, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^vim], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html). 
 
 So then, grapheme clusters, you say?
 
@@ -184,7 +184,7 @@ So then, grapheme clusters, you say?
 
 Again, the world is full of smart people, and [they've done something for us already](http://php.net/manual/en/ref.intl.grapheme.php).
 
-So we got something implemented for us already. I could cry of excitement!
+We got something implemented for us already... I could cry of excitement!
 
 <div class="tip">
 **HOLD IT!** First install the `intl` package as best as you can. For me it's running `brew install php70-intl`. It takes a bit, because we're dealing with dependencies, and dependencies suck.
@@ -197,8 +197,6 @@ And, at long last...
 <script src="https://gist.github.com/charlydagos/a7211ca7ead7a179494a.js"></script>
 
 ## Lessons
-
-I've learned that this is a very complicated subject, for sure.
 
 I've learned that this simple, seemingly innocuous question is not a "stand up and solve it now"-style of question, but rather one that should yield a conversation with your potential employer. Ask them exactly what they mean, what they want, and let them know that you can hold your own when it comes to encodings :)
 
