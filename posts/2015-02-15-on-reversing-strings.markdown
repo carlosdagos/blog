@@ -227,7 +227,7 @@ And that's it. We're done, go ace, at least, this interview question. Or apply i
 
 _¿Qué puedo hacer...? :)_
 
-## Footnotes
+#### Footnotes
 
 [^joel]: I interviewed for a Joel Spolsky-owned company. I totally bombed it and I knew it right there and then. They didn't ask me this question, fyi :) He is, regardless, one of the most influential people on my reading lists, for both good and bad reasons. Clever guy, that Joel.
 [^access]: This means that we can access a `char` of the string directly. This would be exactly like doing [`substr($string, $i, 1)`](http://php.net/substr);
