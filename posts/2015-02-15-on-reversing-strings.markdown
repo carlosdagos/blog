@@ -164,7 +164,7 @@ But it sucks, because [now there's a whole new range of glyphs I can't reverse u
 
 Ah yes, Comp Sci to the rescue! :D
 
-So our family of `mb` functions isn't going to cut it if we want to reverse glyphs out of our minds. This is because thinking about 🤔 and 🇨🇭 as being admitted by "multibyte" is wrong. Generally speaking, these form a part of a much larger, more complex group of glyphs represented by the as [Grapheme clusters](http://unicode.org/reports/tr29/). In the reading resources I shall leave below, there's an article that explains that UTF-8 is a "variable-byte encoding". Meaning just that, actually... each glyph in the system is addressed by UTF-8 variably: it can be a single byte, or 3, or 4.
+So our family of `mb` functions isn't going to cut it if we want to reverse glyphs out of our minds. This is because thinking about 🤔 and 🇨🇭 as being admitted by "multibyte" is wrong. Generally speaking, these form a part of a much larger, more complex group of glyphs represented by [Grapheme clusters](http://unicode.org/reports/tr29/). In the reading resources I shall leave below, there's an article that explains that UTF-8 is a "variable-byte encoding". Meaning just that, actually... each glyph in the system is addressed by UTF-8 variably: it can be a single byte, or 3, or 4.
 
 This is why UTF-8 became famous in the first place[^5], it successfully leveraged ASCII fanatics (looking at you, people from the US) with all of us foreigners with our á and ê and ç characters that confuse the living shit out of people who've never left their hometown of Sandy, Utah.
 
