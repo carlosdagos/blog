@@ -22,18 +22,20 @@ Right?
 
 ## Not so..
 
-So this where maybe the prefix "naive\_" makes sense for the gists up there. You see, the question is NOT "can you iterate over a string and generate a new one?". What they wanted to see if I knew how the language I chose (in this case, php) handles encodings. [Because encodings are very important](http://www.joelonsoftware.com/articles/Unicode.html)[^1].
+So this where maybe the prefix "naive\_" makes sense for the gists up there. You see, the question is NOT "can you iterate over a string and generate a new one?". What they wanted to see if I knew how the language I chose (in this case, php) handles encodings. [Because encodings are very important](http://www.joelonsoftware.com/articles/Unicode.html)[^joel].
 
 ### Why am I naive?
 
 Let's start by looking at the request in parts.
 
+<div class="tip">
 	"Write a function that given a string input will output a reversed version of the input"
 	 ------(1)-------      --------(2)---------      -----------------(3)------------------
 
-	1) I must write 🤔
-	2) I have one (1) input, and it's of type "string"
-	3) I have one (1) output, and it's of type "string", but it's reversed 
+1) I must write 🤔
+2) I have one (1) input, and it's of type `string`
+3) I have one (1) output, and it's of type `string`, but it's reversed 
+</div>
 
 Seemingly I complied with everything.. Until I go a test the next code...
 
@@ -43,7 +45,7 @@ Broken characters. And in the last example we even get a DIFFERENT character? wt
 
 ### What the hell is a "string" anyway?
 
-If you're a Comp Sci Major, you'd probably say "why, an array of `char`, of course 🤔". And yes, you're right. Except no. Not in php, as in php it's a scalar value, and if you don't believe me then test it on your own using [`is_scalar`](http://php.net/is_scalar) function in php. However for this purpose, since we're using `$string{$i}`[^2], then let's say that it is.
+If you're a Comp Sci Major, you'd probably say "why, an array of `char`, of course 🤔". And yes, you're right. Except no. Not in php, as in php it's a scalar value, and if you don't believe me then test it on your own using [`is_scalar`](http://php.net/is_scalar) function in php. However for this purpose, since we're using `$string{$i}`[^access], then let's say that it is.
 
 I'm not going to get into what a `char` is at this point. But if you're a Comp Sci Major you've probably heard someone say, at some point, "a `char` fits into a byte!". So we work with that.
 
@@ -83,6 +85,10 @@ But look at that last part of having ran the `str_split`. There's four character
 
 <script src="https://gist.github.com/charlydagos/2b000273d39731541984.js"></script>
 
+We're still wondering what the hell a `string` is. Why not just call it `$bytes` instead? Well, you _should_, if you were treating it as such. The problem is that it would look weird because those byte-wise functions almost all talk about `str`. But basically, again, this is for historical reasons. We tend to think of a string as some message that has a meaning. It's not always the case. A `string` is an ordered array[^arrays] of whatever the underlying system considers a `char`. In php this turned out to be a `byte`, [but in Java](https://www.quora.com/Why-is-the-size-of-char-in-Java-2-bytes), or in any other language, this may not be the case.
+
+Basically, a `string` is just a notation for a readable array of bytes in some form. It _may_ be readable by humans, or it _may_ be readable by machines. But it's just ordered bytes. The actual meaning of those bytes is up to whatever encoding we're working with.
+
 ## Chars, Multibyte strings, and Grapheme clusters
 
 So those last four bytes tell me something about a "f09fa494", since I got no idea what that is, [I google search it](https://www.google.com/search?q=f09fa494). Holy shit! It's my favorite emoji! 🤔!
@@ -97,7 +103,7 @@ One of my mistakes, and probably yours too, at some point, is when we start conf
 
 - `char`: A byte, contains a number, interpreted by the machine according to some encoding.
 - `string`: An array of bytes.
-- `encoding`: A table that the machine uses to map numbers to glyphs.
+- `encoding`: A translation table[^codepoints] that the machine uses to map numbers to glyphs.
 - `glyphs`: Combinations of lines, colors, and other artistic resources stored somewhere in your machine. Your brain sees them and makes an interpretation of it.
 
 ### Back to reversing a string
@@ -110,7 +116,7 @@ So let's go back to that simple, seemingly innocuous question that started this 
 
 Tricky, tricky, tricky question.
 
-So... what _are_ we being asked here? I suppose that a regular interviewer would at the very least expect you to not return broken characters. Right? So let's rephrase the question a little bit, because the way that it's formulated is a bit tricky. Let's be honest: we *did* reverse the string, a per the definition of a `string` as "an array of bytes". If we reversed the array, then we reversed the string. But no, because it's returning broken stuff, so let's say the next thing:
+So... what _are_ we being asked here? I suppose that a regular interviewer would at the very least expect you to not return broken characters. Right? So let's rephrase the question a little bit, because the way that it's formulated is a bit tricky. Let's be honest: we *did* reverse the string, as per the definition of a `string` as "an array of bytes". If we reversed the array, then we reversed the string. But no, because it's returning broken stuff, so let's say the next thing:
 
 <div class="tip">
 "Write a function that given a string input will output a reversed version of glyphs"
@@ -124,7 +130,7 @@ So am I to write, during an interview, a function that will somehow determine th
 
 Fret not. PHP supports your emojis. In fact, since a `string` is an array of `char`, and therefore an array of bytes, then it supports any string, in any encoding. **All you have to do is know what encoding you're working with**! This is paramount in _any_ application you're working. Know your encoding. [Do it](/images/didyoudoit.jpg).
 
-Most of the time your encoding will be the encoding defined in your system. You can go ahead and try this now in your favourite Linux distro, or OSX[^3], `echo $LC_ALL`. For me, it's `en_US.UTF-8`, which unsurprisingly is what our previous Google search told us about 🤔 and "f09fa494".
+Most of the time your encoding will be the encoding defined in your system. You can go ahead and try this now in your favourite Linux distro, or OSX[^windows], `echo $LC_ALL`. For me, it's `en_US.UTF-8`, which unsurprisingly is what our previous Google search told us about 🤔 and "f09fa494".
 
 In PHP you can also do `echo getenv('LC_ALL');`
 
@@ -150,7 +156,7 @@ Eureka!
 
 <script src="https://gist.github.com/charlydagos/a1b2306c241e0127703a.js"></script> 
 
-If you highlight the last line, you can see that it didn't rotate the Swiss flag glyph and the Argentina flag glyph. It just returned this shit[^4]
+If you highlight the last line, you can see that it didn't rotate the Swiss flag glyph and the Argentina flag glyph. It just returned this shit[^invisible]
 
 	[R][A][H][C]
 
@@ -166,13 +172,13 @@ Ah yes, Comp Sci to the rescue! :D
 
 So our family of `mb` functions isn't going to cut it if we want to reverse glyphs out of our minds. This is because thinking about 🤔 and 🇨🇭 as being admitted by "multibyte" is wrong. Generally speaking, these form a part of a much larger, more complex group of glyphs represented by [Grapheme clusters](http://unicode.org/reports/tr29/). In the reading resources I shall leave below, there's an article that explains that UTF-8 is a "variable-byte encoding". Meaning just that, actually... each glyph in the system is addressed by UTF-8 variably: it can be a single byte, or 3, or 4.
 
-This is why UTF-8 became famous in the first place[^5], it successfully leveraged ASCII fanatics (looking at you, people from the US) with all of us foreigners with our á and ê and ç characters that confuse the living shit out of people who've never left their hometown of Sandy, Utah.
+This is why UTF-8 became famous in the first place[^doit], it successfully leveraged ASCII fanatics (looking at you, people from the US) with all of us foreigners with our á and ê and ç characters that confuse the living shit out of people who've never left their hometown of Sandy, Utah.
 
-So just because we encountered some "upper-bound" glyph, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^6], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html). 
+So just because we encountered some "upper-bound" glyph, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^vim], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html). 
 
 So then, grapheme clusters, you say?
 
-### Finally a solution!
+## Finally a solution!
 
 Again, the world is full of smart people, and [they've done something for us already](http://php.net/manual/en/ref.intl.grapheme.php).
 
@@ -203,6 +209,8 @@ The problem is **far, far** more reaching than your code. You'll encounter issue
 - Performance: It's quite intuitive, but for the sake of completeness just skim over [the file that implements `grapheme`-based functions](https://github.com/cataphract/PECL-intl/blob/master/grapheme/grapheme_string.c). This means that you **should not** _always_ use these, **because they're slower**. Nor should you _always_ use `mb`-based functions. Rather, think about the context of the code you're writing, and think about what makes sense where.
 - i18n: If you want your software to be even mildly international, plan for these types of things! 
 
+And that's it. We're done, go ace, at least, this interview question. Or apply it in some context. Or [drop me a line!](/contact.html). I can't guarantee that I'll be available, or that I'll ever answer, or that I'll care, but I'll appreciate it to some extent anyway.
+
 ### Resources and more reading
 
 - [PHP Documentation on multibyte strings](http://php.net/manual/en/book.mbstring.php)
@@ -213,9 +221,11 @@ The problem is **far, far** more reaching than your code. You'll encounter issue
 
 ## Footnotes
 
-[^1]: I interviewed for a Joel Spolsky-owned company. I totally bombed it and I knew it right there and then. They didn't ask me this question, fyi :) He is, regardless, one of the most influential people on my reading lists, for both good and bad reasons. Clever guy, that Joel.
-[^2]: This means that we can access a `char` of the string directly. This would be exactly like doing [`substr($string, $i, 1)`](http://php.net/substr);
-[^3]: Sorry, Windows, I'll not attend to you for now.
-[^4]: I had to type these out since they were pretty much invisible.
-[^5]: You would know this already, if you [had read](/images/didyoudoit.jpg) that [Joel Spolsky link](www.joelonsoftware.com/articles/Unicode.html) I left above on character encodings.
-[^6]: Even my `vim` editor is starting to choke at this point.
+[^joel]: I interviewed for a Joel Spolsky-owned company. I totally bombed it and I knew it right there and then. They didn't ask me this question, fyi :) He is, regardless, one of the most influential people on my reading lists, for both good and bad reasons. Clever guy, that Joel.
+[^access]: This means that we can access a `char` of the string directly. This would be exactly like doing [`substr($string, $i, 1)`](http://php.net/substr);
+[^windows]: Sorry, Windows, I'll not attend to you for now.
+[^invisible]: I had to type these out since they were pretty much invisible.
+[^doit]: You would know this already, if you [had read](/images/didyoudoit.jpg) that [Joel Spolsky link](www.joelonsoftware.com/articles/Unicode.html) I left above on character encodings.
+[^vim]: Even my `vim` editor is starting to choke at this point.
+[^arrays]: I keep using "array" and not "list" because these are different data types, strictly speaking.
+[^codepoints]: I purposefully left out the topic of "code-points", to not type this post forever. However, ["code points"](http://unicode.org/glossary/#code_point) are an abstraction layer between a glyph and how it's stored in memory. They are the most centric part of why Unicode is important. Before, if you read the resources, each glyph was assigned a number. This is not bad, but it limits the amount of glyphs to the maximum number you can hold in a single byte. Code points abstract this away, giving an assigned number to each glyph, and letting the machine store that number however it wants; in one byte, in two, in three... etc.
