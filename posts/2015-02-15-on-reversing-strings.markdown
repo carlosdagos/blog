@@ -223,7 +223,7 @@ And that's it. We're done, go ace, at least, this interview question. Or apply i
 
 ## Listening to...
 
-<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6b4l8rVWImW1hkCshXichu" width="640" height="400" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6b4l8rVWImW1hkCshXichu" width="100%" height="400" frameborder="0" allowtransparency="true"></iframe>
 
 _¿Qué puedo hacer...? :)_
 
