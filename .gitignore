@@ -1,8 +1,13 @@
 _cache
 _site
 dist
+<<<<<<< HEAD
 *.o
 *.hi
 *~
 **.swp
 ..bfg-report
+=======
+*~
+**.swp
+>>>>>>> 4331ff51fe9c40e76ec37c21342a88e848105361
