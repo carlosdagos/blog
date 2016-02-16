@@ -1,6 +1,12 @@
 name:               blog
 version:            0.1.0.0
 build-type:         Simple
+Extra-source-files: README.md
+Synopsis:           Personal website for Carlos D.
+Description:        Personal website for Carlos D.
+Maintainer:         carlos.dagostino@gmail.com
+License:            AllRightsReserved
+Copyright:          (C) 2015 Carlos D'Agostino
 cabal-version:      >= 1.10
 
 executable site
