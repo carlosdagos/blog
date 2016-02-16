@@ -3,3 +3,4 @@ _site
 dist
 *~
 **.swp
+..bfg-report
