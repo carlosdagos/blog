@@ -1,6 +1,8 @@
 _cache
 _site
 dist
+*.o
+*.hi
 *~
 **.swp
 ..bfg-report
