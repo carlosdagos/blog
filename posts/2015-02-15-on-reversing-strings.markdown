@@ -59,7 +59,7 @@ Let's look at the following string.
 
 And let's run some `str` functions over it, like [`strlen`](http://php.net/strlen), [`substr`](http://php.net/substr), and [`str_split`](http://php.net/str_split).
 
-Before we get any code, let's think about what that output should be. 
+Before we get to any code, let's think about what that output should be. 
 
 Let's count `char`s...
 
