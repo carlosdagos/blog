@@ -2,4 +2,17 @@
 
 # Just save myself some time 
 
-./site rebuild && scp -r _site/* cdagostino.io:/var/www/cdagostino.io/
+echo "Cleaning..."
+./site clean > /dev/null
+
+echo "Rebuilding"
+./site rebuild > /dev/null
+
+endpoint=cdagostino.io:/var/www/cdagostino.io
+
+\scp -r _site/* $endpoint 1> /dev/null
+if [ $? -eq 0 ]; then
+  echo "Deployed! Visit http://cdagostino.io"
+else
+  echo "Yo.. what?"
+fi
