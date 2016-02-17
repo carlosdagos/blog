@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Just save myself some time 
+
+./site rebuild && scp -r _site/* cdagostino.io:/var/www/cdagostino.io/
