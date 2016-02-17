@@ -4,7 +4,7 @@ description: How I was once interviewed and realised I knew very little about ch
 tags: unicode, emoji, interviews
 ---
 
-_This article may not display 100% correct on your computer, some glyphs may be missing._
+_This post may not display 100% correct on your computer, some glyphs may be missing._
 
 One time, during an interview I was asked:
 
