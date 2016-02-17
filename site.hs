@@ -21,12 +21,15 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    match (fromList ["posts/*", "drafts/*"]) $ do
+    let compilePost = do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
+
+    match "posts/*" $ compilePost
+    match "drafts/*" $ compilePost
 
     create ["archive.html"] $ do
         route idRoute
