@@ -225,6 +225,10 @@ And that's it. We're done, go ace, at least, this interview question. Or apply i
 
 _¿Qué puedo hacer...? :)_
 
+#### Amendments
+
+You can find any and all amendments to this post [here](https://github.com/charlydagos/blog/commits/master/posts/2015-02-15-on-reversing-strings.markdown).
+
 #### Footnotes
 
 [^joel]: I interviewed for a Joel Spolsky-owned company. I totally bombed it and I knew it right there and then. They didn't ask me this question, fyi :) He is, regardless, one of the most influential people on my reading lists, for both good and bad reasons. Clever guy, that Joel.
