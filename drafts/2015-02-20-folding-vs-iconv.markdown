@@ -42,7 +42,7 @@ I suspected that already but it never hurts to check.
 
 So our source data is coming in UTF8. Upon checking the [database charset](http://www.postgresql.org/docs/9.2/static/multibyte.html), it showed up as [`ISO 8859-1`](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), also known (perhaps incorrectly) as `Latin1`. It's a character set from the 80's intended to group most of the European characters, and since I [live](/contact.html) right in the middle of Europe, this makes sense.
 
-However, it's unfortunate, because I'm storing bytes in the database that are meant to be read as `UTF-8`, and the database will spit them back at me thinking it's `ISO-8859-1`. Hence, unrecognizable characters: �. 
+However, it's unfortunate, because I'm storing bytes in the database that are meant to be read as `UTF-8`, and the database (and the database clients) will spit them back at me thinking it's `ISO-8859-1`. Hence, unrecognizable characters: �. 
 
 
 ### The "solution"
