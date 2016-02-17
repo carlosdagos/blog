@@ -1,5 +1,7 @@
 ---
-title: On reversing strings 
+title: On reversing strings
+description: How I was once interviewed and realised I knew very little about character sets and encoding
+tags: unicode, emoji, interviews
 ---
 
 _This article may not display 100% correct on your computer, some glyphs may be missing._
