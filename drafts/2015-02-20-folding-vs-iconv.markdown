@@ -52,6 +52,8 @@ The first column of the `hexdump` output is the byte offset. We're interested in
 
 If you look closely, hexdump is even nice enough to tell us which glyphs are multibyte[^utf8variable], denoted by `..`. You can read then the matching glyphs to their `UTF-8` representation. So `G = 0x47`, `y = 0x79`, [`ö = 0xC3 0xB6`](http://www.utf8-chartable.de/unicode-utf8-table.pl?start=128&number=128&names=-&utf8=0x&unicodeinhtml=hex), .., [`ű = 0xC5 0xB1`](http://www.utf8-chartable.de/unicode-utf8-table.pl?start=256&names=-&utf8=0x), .., and yeah, you get it.
 
+Now these bytes are stored in the database, but the database thinks these are `ISO-8859-1` values. Now the thing is that this encoding is **single-byte** encoding, we're not going to be reading by boundaries like we did in `UTF-8`, but byte by byte. So it reads... `0x47 = G`, `0x79 = y`, `0xC3 = ?`, ..., and it breaks.
+
 ### The "solution"
 
 ### Not so fast
