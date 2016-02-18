@@ -36,4 +36,4 @@ Yeah.. what?
 
 ### And... yeah... but only if you want to
 
-<img src="//www.gravatar.com/a80c5ae5e57df52ee282acb103ba05ac.qr?s=200" />
+<a href="mailto:hey@cdagostino.io">hey@cdagostino.io</a>
