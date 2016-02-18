@@ -237,7 +237,7 @@ You can find any and all amendments to this post [here](https://github.com/charl
 [^access]: This means that we can access a `char` of the string directly. This would be exactly like doing [`substr($string, $i, 1)`](http://php.net/substr);
 [^windows]: Sorry, Windows, I'll not attend to you for now.
 [^invisible]: I had to type these out since they were pretty much invisible.
-[^doit]: You would know this already, if you [had read](/images/didyoudoit.jpg) that [Joel Spolsky link](www.joelonsoftware.com/articles/Unicode.html) I left above on character encodings.
+[^doit]: You would know this already, if you [had read](/images/didyoudoit.jpg) that [Joel Spolsky link](http://www.joelonsoftware.com/articles/Unicode.html) I left above on character encodings.
 [^vim]: Even my `vim` editor is starting to choke at this point.
 [^arrays]: I keep using "array" and not "list" because these are different data types, strictly speaking.
 [^codepoints]: I purposefully left out the topic of "code-points", to not type this post forever. However, ["code points"](http://unicode.org/glossary/#code_point) are an abstraction layer between a glyph and how it's stored in memory. They are the most centric part of why Unicode is important. Before, if you read the resources, each glyph was assigned a number. This is not bad, but it limits the amount of glyphs to the maximum number you can hold in a single byte. Code points abstract this away, giving an assigned code point to each glyph, and letting the machine store that code point however it wants; in one byte, in two, in three... etc.
