@@ -4,7 +4,7 @@ description: iconv is not the solution to all your problems
 tags: unicode, iconv
 ---
 
-Had a bit of a problem recently and it fit perfectly with my previous post about character encodings. Whereas in my previous post I talked a lot about php, in this one I use JavaScript/NodeJS, though not so intensely.
+Had a bit of a problem recently and it fit perfectly with my previous post about character encodings. Whereas in my previous post I talked a lot about php, in this one I use JavaScript/NodeJS and Bash/ZSH, though not so intensely.
 
 ## The problem
 
@@ -70,11 +70,13 @@ Now these bytes are stored in the database, but the database thinks these are `I
 
 ## Considerations
 
-I don't know if I'll be writing more on character sets, because I think that two blog posts about this has exhausted the subject a little bit.
+- I don't know if I'll be writing more on character sets, because I think that two blog posts about this has exhausted the subject a little bit.
+- The `LC_ALL` environment variable can give you issues when running some shell programs. A quick-and-dirty solution is to prefix the variable definition before the execution of a certain program. Like so... `$ LC_ALL=C myprogram --flag=whatever`.
 
 ## Resources and more reading
 
 - [`UTF-8` chartable](http://www.utf8-chartable.de/)
+- [`UTF-8` implementation and resources](http://unicode.org/resources/utf8.html)
 
 ## Listening to...
 
