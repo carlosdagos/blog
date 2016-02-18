@@ -95,7 +95,7 @@ Basically, a `string` is just a notation for a readable array of bytes in some f
 
 ## Chars, Multibyte strings, and Grapheme clusters
 
-So those last four bytes tell me something about a "f09fa494", since I got no idea what that is, [I google search it](https://www.google.com/search?q=f09fa494). Holy shit! It's my favorite emoji! 🤔!
+So those last four bytes tell me something about a "f09fa494", since I got no idea what that is, [I google search it](https://www.google.com/search?q=f09fa494). It's my favorite emoji! 🤔!
 
 ### Back to `char`
 

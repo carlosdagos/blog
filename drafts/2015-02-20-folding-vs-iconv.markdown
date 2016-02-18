@@ -90,4 +90,4 @@ _Thanks for the gift &#x2665;&#xFE0F;_
 [^fakedata]: I'm obviously not going to use real data. This is fake data. In Hungarian it means "Beautiful cup". I like cups. I have a few that are really nice.
 [^omg]: omg I'm actually referring to myself already. [I feel like a total author right now, guys](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)!
 [^fakedataagain]: Again, I'm using fake data for this post. I'll probably be using fake data on all posts.
-[^utf8variable]: But you know this already, because you read that [first post](/posts/2015-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
+[^utf8variable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2015-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
