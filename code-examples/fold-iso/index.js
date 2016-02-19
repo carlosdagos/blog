@@ -29,7 +29,6 @@
 
     log("In: ", i)
     log(" Bytes: ", buf)
-    log(" String: ", buf.toString())
     log(" Length: ", buf.length)
 
     fs.writeFileSync('test' + i + '.txt', buf, 'binary')

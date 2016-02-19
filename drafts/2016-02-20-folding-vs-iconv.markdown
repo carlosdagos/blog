@@ -92,7 +92,7 @@ So basically, if the letter `ö` in `UTF-8` looks like `ö = 0xC3 0xB6`, in `ISO
 
 Well the table below is a nice illustration..
 
-<table style="text-align:left;">
+<table style="text-align:left;"><!-- I crack myself up XD -->
 <thead>
 <tr><th>Encoding</th><th>Byte representation</th></tr>
 </thead>
@@ -110,13 +110,57 @@ This is what a lot of people get wrong about `iconv`, it's not a magic solution 
 
 So the solution that we opted for is a bit less known, albeit useful. 
 
-TODO: Write about how we folded characters
+It's called "folding" although I guess you could call it "mapping", or whatever you want. It relies on mapping a character[^charactersnotgliphs] to whatever is "closest" either in shape or meaning. So we went ahead and implemented a fold for it. I called it `foldToISO()` because I'm simply not creative enough.
 
-Folding characters does **not** mean that you convert the byte representation from one charset to another, you change the actual glyph within the same charset.
+When you `foldToISO`, you're ensuring (at least in most cases), that you're going to be mapping to a character that **does** exist in the "receiving" end encoding, in this case `ISO-8859-1`.
 
-### [iconv](http://linux.die.net/man/1/iconv)
+This way, we say "map `ű` to `u`", because we know that `u` _is_ in `ISO-8859-1`, and then therefore `iconv` can handle it accordingly. It won't have to think much about it, though, because in both cases it's `u = 0x75`.
 
-#### The `//TANSLIT` and `//IGNORE` flags
+<script src="https://gist.github.com/charlydagos/87439f1f120dd2df8df4.js"></script>
+
+Now, when we executed that and looked at the database, we saw..
+
+<div class="success">
+Gyönyöru Bögre
+</div>
+
+And since there were no broken characters and the client understood the limitation, everyone was happy :)
+
+#### Practical example
+
+So let's try to think about when folding characters might come in useful 🤔.
+
+I really like [Ólafur Arnalds](https://soundcloud.com/modhat/o-lafur-arnalds-full), and one of my favorite songs from him is ["Þú ert jörðin"](https://open.spotify.com/track/4zo9nVH8uBk5DnUa92ogWn). I listen to a lot of Spotify, and use the search bar a lot. Due to my travelling and living in so many places, I use a Spanish ISO keyboard layout, and I don't have all the characters available to search for my song... "Þú ert jörðin". If I were to search for it, I would type what I can make out of that.. something like "ert jordin", for example[^tryityourself], and this works!
+
+Well, I have no idea how Spotify does search, but let's assume that they use [Elasticsearch](https://www.elastic.co/products/elasticsearch). Now you don't have to know much about it, but it's built on top of [Apache Lucene](https://lucene.apache.org/core/), which is a text search engine.
+
+Now [Lucene stores text in `UTF-8`](https://github.com/apache/lucene-solr/blob/master/lucene/core/src/java/org/apache/lucene/util/BytesRef.java), meaning that it supports all the characters of that song that I desperately wanna listen to. No problem for them there. I only typed "ert jordin", however, so how can they successfully return my song?
+
+Well, I'm no big-city developer, but if it were me, I would fold the shit out of that string into ASCII values, and make a lookup on a reverse index.
+
+And if we try to fold "Þú ert jörðin" to ASCII, we get "THu ert jordin"... how grand!
+
+It just so happens that Lucene comes with an [AsciiFoldingFilter](https://github.com/apache/lucene-solr/blob/master/lucene/analysis/common/src/java/org/apache/lucene/analysis/miscellaneous/ASCIIFoldingFilter.java) right out of the box.
+
+So there you go..., problem mildly-solved.. I mean, you still have to think about how to store all that, and how to build it, etc etc etc :)
+
+#### Achtung!
+
+Folding characters does **not** mean that you convert the byte representation from one charset to another, you change the actual glyph within the same charset. This is why in the last gist up there we're still doing `iconv.encode`. Except that now we can safely do this conversion.
+
+#### The result
+
+Well, feast your eyes on this..
+
+
+
+### [iconv](http://linux.die.net/man/1/iconv) and the `//TANSLIT` and `//IGNORE` flags
+
+So if you've ever used `iconv` to some extent, you're probably thinking "Yo! What about the `//TRANSLIT` flag? Doesn't that do the folding for you already?".
+
+And you're right, it ["transliterates"](https://en.wikipedia.org/wiki/Transliteration) your text. However, it's not very well documented, not widely supported by most of the `iconv` clients. In my experience, using `//TRANSLIT` has yielded more problems than it has solved.
+
+So what about `//IGNORE`? Well, you're ignoring the problem altogether, so it's simply bad practice :)
 
 ## Lessons
 
@@ -148,3 +192,5 @@ _Thanks for the gift &#x2665;&#xFE0F;_
 [^fakedataagain]: Again, I'm using fake data for this post. I'll probably be using fake data on all posts.
 [^utfeightvariable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2015-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
 [^poorhungary]: [https://en.wikipedia.org/wiki/ISO/IEC_8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), look at the "Missing characters" section for Hungarian.
+[^tryityourself]: Try it for yourself, try different combinations, etc :D
+[^charactersnotgliphs]: In most "fold" implementations, you'll find people folding per `char`, instead of per `grapheme-cluster`. In most JavaScript implementations, you'll find that a `char` is 16-bit. Now this leaves the door open for `UTF-16` and `UCS-2`. If you're interested in that [Matthias Bynens wrote a great post about it](https://mathiasbynens.be/notes/javascript-encoding), and I would also advise you to [follow him](https://twitter.com/mathias). He's pretty smart!
