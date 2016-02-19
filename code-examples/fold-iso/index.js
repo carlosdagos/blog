@@ -15,11 +15,13 @@
     console.log("You must supply a string.")
     return process.exit()
   }
-
+  
+  var iso, utf8, utf16
   var input = process.argv[2]
+  var log = console.log 
 
-  console.log("Our input:\t",  input)
-  console.log("In ISO8859:\t", convertToISO8859(input))
-  console.log("In UTF8:\t",    convertToUTF8(input))
-  console.log("In UTF16:\t",   convertToUTF16(input))
+  log("Our input:\t",  input, " Length: ", input.length)
+  log("In ISO8859:\t", iso   = convertToISO8859(input), " Length: ", iso.length)
+  log("In UTF8:\t",    utf8  = convertToUTF8(input), " Length: ", utf8.length)
+  log("In UTF16:\t",   utf16 = convertToUTF16(input), " Length: ", utf16.length)
 }()

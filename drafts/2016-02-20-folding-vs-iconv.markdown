@@ -56,6 +56,8 @@ Now these bytes are stored in the database, but the database thinks these are `I
 
 ### The "solution"
 
+So we presented the problem and one of the devs said: "I can fix it!", and went ahead to add the lines...j
+
 ### Not so fast
 
 ## The real solution
