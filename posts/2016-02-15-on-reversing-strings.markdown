@@ -41,7 +41,7 @@ Let's start by looking at the request in parts.
 3) I have one (1) output, and it's of type `string`, but it's reversed 
 </div>
 
-Seemingly I complied with everything.. Until I go a test the next code...
+Seemingly I complied with everything.. Until I go and test the next code...
 
 <script src="https://gist.github.com/charlydagos/5fcd07990e57f412d301.js"></script>
 
