@@ -46,7 +46,7 @@ However, it's unfortunate, because I'm storing bytes in the database that are me
 
 If you still don't know what's going on, let's look at the `hexdump` of that particular string.
 
-[<img src="/images/posts_2015-02-20-hexdump_1.png" alt="hedxump" />](/images/posts_2015-02-20-hexdump_1.png)
+[<img src="/images/posts_2016-02-20-hexdump_1.png" alt="hedxump" />](/images/posts_2015-02-20-hexdump_1.png)
 
 The first column of the `hexdump` output is the byte offset. We're interested in the other values for now.
 
@@ -140,6 +140,10 @@ Well, I'm no big-city developer, but if it were me, I would fold the shit out of
 
 And if we try to fold "Þú ert jörðin" to ASCII, we get "THu ert jordin"... how grand!
 
+Yeah... 
+
+<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4zo9nVH8uBk5DnUa92ogWn" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
 It just so happens that Lucene comes with an [AsciiFoldingFilter](https://github.com/apache/lucene-solr/blob/master/lucene/analysis/common/src/java/org/apache/lucene/analysis/miscellaneous/ASCIIFoldingFilter.java) right out of the box.
 
 So there you go..., problem mildly-solved.. I mean, you still have to think about how to store all that, and how to build it, etc etc etc :)
@@ -150,9 +154,11 @@ Folding characters does **not** mean that you convert the byte representation fr
 
 #### The result
 
-Well, feast your eyes on this..
+Well, feast your eyes on this... internally, the results looked like
 
+<img src="/images/posts_2016-02-20-hexdump_2.png" alt="hexdump 2" />
 
+It's also evident that we're now saving a few bytes. If you care about that. I think that if a client has TBs of information, then yes, they probably do :)
 
 ### [iconv](http://linux.die.net/man/1/iconv) and the `//TANSLIT` and `//IGNORE` flags
 
@@ -164,10 +170,17 @@ So what about `//IGNORE`? Well, you're ignoring the problem altogether, so it's 
 
 ## Lessons
 
+- `iconv` is awesome. But it's badly documented. And misunderstood, poor `iconv` :(
+- `iconv` is not a magic wand.
+- "Folding" has its advantages.
+- The world is not Unicode.
+
 ## Considerations
 
 - I don't know if I'll be writing more on character sets, because I think that two blog posts about this has exhausted the subject a little bit.
 - The `LC_ALL` environment variable can give you issues when running some shell programs. A quick-and-dirty solution is to prefix the variable definition before the execution of a certain program. Like so... `$ LC_ALL=C myprogram --flag=whatever`.
+- Have you [learned your encoding?](/images/didyoudoit.jpg)
+- Soon enough I'll be posting the code that does the folding :)
 
 ## Resources and more reading
 
@@ -180,7 +193,7 @@ Actually on vinyl, but here's the Spotify link :)
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A2fGCAYUMssLKiUAoNdxGLx" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 
-_Thanks for the gift &#x2665;&#xFE0F;_
+_Thanks for the gift :)_
 
 ### Amendments
 
