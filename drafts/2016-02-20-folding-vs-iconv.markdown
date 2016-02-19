@@ -19,7 +19,7 @@ Gyönyörű Bögre
 On the database was then showing up as...
 
 <div class="error">
-Gy&#xFFFD;ny&#xFFFD;r"u B&#xFFFD;gre
+Gy&#xFFFD;ny&#xFFFD;r? B&#xFFFD;gre
 </div>
 
 ### So what's going on here?
@@ -40,7 +40,7 @@ The line `Content-Type: application/json; charset=utf-8` is pretty explicit tell
 
 I suspected that already but it never hurts to check.
 
-So our source data is coming in `UTF- 8`. Upon checking the [database charset](http://www.postgresql.org/docs/9.2/static/multibyte.html), it showed up as [`ISO 8859-1`](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), also known (perhaps incorrectly) as `Latin 1`. It's a character set from the late 80's intended to group most of the European characters, and since [I live](/contact.html) right in the middle of Europe, this makes sense.
+So our source data is coming in `UTF-8`. Upon checking the [database charset](http://www.postgresql.org/docs/9.2/static/multibyte.html), it showed up as [`ISO 8859-1`](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), also known (perhaps incorrectly) as `Latin 1`. It's a character set from the late 80's intended to group most of the European characters, and since [I live](/contact.html) right in the middle of Europe, this makes sense.
 
 However, it's unfortunate, because I'm storing bytes in the database that are meant to be read as `UTF-8`, and the database (and the database clients) will spit them back at me thinking it's `ISO-8859-1`. Hence, unrecognizable characters: &#xFFFD;. 
 
@@ -50,19 +50,69 @@ If you still don't know what's going on, let's look at the `hexdump` of that par
 
 The first column of the `hexdump` output is the byte offset. We're interested in the other values for now.
 
-If you look closely, hexdump is even nice enough to tell us which glyphs are multibyte[^utf8variable], denoted by `..`. You can read then the matching glyphs to their `UTF-8` representation. So `G = 0x47`, `y = 0x79`, [`ö = 0xC3 0xB6`](http://www.utf8-chartable.de/unicode-utf8-table.pl?start=128&number=128&names=-&utf8=0x&unicodeinhtml=hex), .., [`ű = 0xC5 0xB1`](http://www.utf8-chartable.de/unicode-utf8-table.pl?start=256&names=-&utf8=0x), .., and yeah, you get it.
+If you look closely, hexdump is even nice enough to tell us which glyphs are multibyte[^utfeightvariable], denoted by `..` (this means two bytes, try more glyphs on your own :D). You can read then the matching glyphs to their `UTF-8` representation. So `G = 0x47`, `y = 0x79`, [`ö = 0xC3 0xB6`](http://www.utf8-chartable.de/unicode-utf8-table.pl?start=128&number=128&names=-&utf8=0x&unicodeinhtml=hex), .., [`ű = 0xC5 0xB1`](http://www.utf8-chartable.de/unicode-utf8-table.pl?start=256&names=-&utf8=0x), .., and yeah, you get it.
 
 Now these bytes are stored in the database, but the database thinks these are `ISO-8859-1` values. Now the thing is that this encoding is **single-byte** encoding, we're not going to be reading by boundaries like we did in `UTF-8`, but byte by byte. So it reads... `0x47 = G`, `0x79 = y`, `0xC3 = ?`, ..., and it breaks.
 
 ### The "solution"
 
-So we presented the problem and one of the devs said: "I can fix it!", and went ahead to add the lines...j
+So we presented the problem and one of the devs said: "I can fix it!", and went ahead to add the lines...
+
+<script src="https://gist.github.com/charlydagos/c26c434033d58101366b.js"></script>
+
+Fair enough, right?
 
 ### Not so fast
 
+When we got the output, it showed up as something like
+
+<div class="error">
+Gyönyör? Bögre
+</div>
+
+**What the hell is that `?` _still_ doing there?**
+
+At this point we're all getting a little agitated.
+
 ## The real solution
 
+So what gives? [`iconv`](http://linux.die.net/man/1/iconv) _should_ have worked.
+
+Right?
+
+Well, no.
+
+Just to quote the `iconv` manual page...
+
+<div class="quote">
+Convert encoding of given files from one encoding to another
+</div>
+
+So basically, if the letter `ö` in `UTF-8` looks like `ö = 0xC3 0xB6`, in `ISO-8859-1` it looks like `ö = 0xF6`. It makes sense, in `UTF-8` it's a multi-byte glyph, and in `ISO-8859-1` it's a single byte, just like it was intended. And satisfyingly enough, `iconv` did just that for us. But what about that weird-looking `ű`?
+
+Well the table below is a nice illustration..
+
+<table style="text-align:left;">
+<thead>
+<tr><th>Encoding</th><th>Byte representation</th></tr>
+</thead>
+<tbody>
+<tr><td>utf8(ű)</td><td>0xC5 0xB1</td></tr>
+<tr><td>iso8859(ű)</td><td>?</td></tr>
+</tbody>
+</table>
+
+[The letter `ű`](https://en.wikipedia.org/wiki/Double_acute_accent) doesn't exist in `ISO-8859-1`[^poorhungary], so `iconv` can't map it to anything.
+
+This is what a lot of people get wrong about `iconv`, it's not a magic solution to your character problems. And really, if we had used a more robust `iconv` library like [`node-iconv`](https://github.com/bnoordhuis/node-iconv), then we would've received a proper error message. Nothing wrong with `iconv-lite`, in fact they claim it's faster, and the [source code](https://github.com/ashtuchkin/iconv-lite) is quite easy to follow and make sense of it. However it suppresses this message.
+
 ### Folding characters
+
+So the solution that we opted for is a bit less known, albeit useful. 
+
+TODO: Write about how we folded characters
+
+Folding characters does **not** mean that you convert the byte representation from one charset to another, you change the actual glyph within the same charset.
 
 ### [iconv](http://linux.die.net/man/1/iconv)
 
@@ -96,4 +146,5 @@ _Thanks for the gift &#x2665;&#xFE0F;_
 [^fakedata]: I'm obviously not going to use real data. This is fake data. In Hungarian it means "Beautiful cup". I like cups. I have a few that are really nice.
 [^omg]: omg I'm actually referring to myself already. [I feel like a total author right now, guys](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)!
 [^fakedataagain]: Again, I'm using fake data for this post. I'll probably be using fake data on all posts.
-[^utf8variable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2015-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
+[^utfeightvariable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2015-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
+[^poorhungary]: [https://en.wikipedia.org/wiki/ISO/IEC_8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), look at the "Missing characters" section for Hungarian.
