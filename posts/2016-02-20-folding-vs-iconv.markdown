@@ -114,7 +114,7 @@ It's called "folding" although I guess you could call it "mapping", or whatever 
 
 When you `foldToISO`, you're ensuring (at least in most cases), that you're going to be mapping to a character that **does** exist in the "receiving" end encoding, in this case `ISO-8859-1`.
 
-This way, we say "map `ű` to `u`", because we know that `u` _is_ in `ISO-8859-1`, and then therefore `iconv` can handle it accordingly. It won't have to think much about it, though, because in both cases it's `u = 0x75`.
+This way, we say "map `ű` to `u`", because we know that `u` _is_ in `ISO-8859-1`, and then therefore `iconv` can handle it accordingly. It won't have to think much about it, though, because in both cases it's `u = 0x75`[^anothermapping].
 
 <script src="https://gist.github.com/charlydagos/87439f1f120dd2df8df4.js"></script>
 
@@ -209,3 +209,4 @@ Any and all amendments to this post can be found [here](https://github.com/charl
 [^poorhungary]: [https://en.wikipedia.org/wiki/ISO/IEC_8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), look at the "Missing characters" section for Hungarian.
 [^tryityourself]: Try it for yourself, try different combinations, etc :D
 [^charactersnotgliphs]: In most "fold" implementations, you'll find people folding per `char`, instead of per `grapheme-cluster`. In most JavaScript implementations, you'll find that a `char` is 16-bit. Now this leaves the door open for `UTF-16` and `UCS-2`. If you're interested in that [Matthias Bynens wrote a great post about it](https://mathiasbynens.be/notes/javascript-encoding), and I would also advise you to [follow him](https://twitter.com/mathias). He's pretty smart!
+[^anothermapping]: According to Wikipedia you can also use the letters [`Û`](https://en.wikipedia.org/wiki/%C3%9B) or [`Ü`](https://en.wikipedia.org/wiki/%C3%9C). In these cases, we can see that in `UTF-8` these look like `Û = 0xC3 0x9B` and `Ü = 0xC3 0x9C`, whereas in `ISO-8859-1` they look like `Û = 0xDB` and `Ü = 0xDC`.
