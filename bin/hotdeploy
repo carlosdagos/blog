@@ -10,7 +10,7 @@ echo "Rebuilding"
 
 endpoint=cdagostino.io:/var/www/cdagostino.io
 
-\scp -r _site/* $endpoint 1> /dev/null
+\rsync -ra _site $endpoint 
 if [ $? -eq 0 ]; then
   echo "Deployed! Visit http://cdagostino.io"
 else
