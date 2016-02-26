@@ -7,7 +7,6 @@ Description:        Personal website for Carlos D.
 Maintainer:         carlos.dagostino@gmail.com
 License:            AllRightsReserved
 Copyright:          (C) 2015 Carlos D'Agostino
-=======
 cabal-version:      >= 1.10
 
 executable site
