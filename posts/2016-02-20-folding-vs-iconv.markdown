@@ -24,7 +24,7 @@ Gy&#xFFFD;ny&#xFFFD;r? B&#xFFFD;gre
 
 ### So what's going on here?
 
-If you first read [my first blog post](/posts/2015-02-15-on-reversing-strings.html)[^omg], you'll have some intuition of what's happening. But since you're lazy, and so am I, then let's break it down.
+If you first read [my first blog post](/posts/2016-02-15-on-reversing-strings.html)[^omg], you'll have some intuition of what's happening. But since you're lazy, and so am I, then let's break it down.
 
 - The original data comes from an API source. The text looks OK.
 - That data is retrieved and then stored in a database for the client. The text is garbled or otherwise unreadable.
@@ -46,7 +46,7 @@ However, it's unfortunate, because I'm storing bytes in the database that are me
 
 If you still don't know what's going on, let's look at the `hexdump` of that particular string.
 
-[<img src="/images/posts_2016-02-20-hexdump_1.png" alt="hedxump" />](/images/posts_2015-02-20-hexdump_1.png)
+[<img src="/images/posts_2016-02-20-hexdump_1.png" alt="hedxump" />](/images/posts_2016-02-20-hexdump_1.png)
 
 The first column of the `hexdump` output is the byte offset. We're interested in the other values for now.
 
@@ -156,7 +156,7 @@ Folding characters does **not** mean that you convert the byte representation fr
 
 Well, feast your eyes on this... internally, the results looked like
 
-<img src="/images/posts_2016-02-20-hexdump_2.png" alt="hexdump 2" />
+[<img src="/images/posts_2016-02-20-hexdump_2.png" alt="hexdump 2" />](/images/posts_2016-02-20-hexdump_2.png)
 
 It's also evident that we're now saving a few bytes. If you care about that. I think that if a client has TBs of information, then yes, they probably do :)
 
@@ -205,7 +205,7 @@ Any and all amendments to this post can be found [here](https://github.com/charl
 [^fakedata]: I'm obviously not going to use real data. This is fake data. In Hungarian it means "Beautiful cup". I like cups. I have a few that are really nice.
 [^omg]: omg I'm actually referring to myself already. [I feel like a total author right now, guys](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)!
 [^fakedataagain]: Again, I'm using fake data for this post. I'll probably be using fake data on all posts.
-[^utfeightvariable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2015-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
+[^utfeightvariable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2016-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
 [^poorhungary]: [https://en.wikipedia.org/wiki/ISO/IEC_8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), look at the "Missing characters" section for Hungarian.
 [^tryityourself]: Try it for yourself, try different combinations, etc :D
 [^charactersnotgliphs]: In most "fold" implementations, you'll find people folding per `char`, instead of per `grapheme-cluster`. In most JavaScript implementations, you'll find that a `char` is 16-bit. Now this leaves the door open for `UTF-16` and `UCS-2`. If you're interested in that [Matthias Bynens wrote a great post about it](https://mathiasbynens.be/notes/javascript-encoding), and I would also advise you to [follow him](https://twitter.com/mathias). He's pretty smart!
