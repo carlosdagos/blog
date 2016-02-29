@@ -136,7 +136,7 @@ Well, I have no idea how Spotify does search, but let's assume that they use [El
 
 Now [Lucene stores text in `UTF-8`](https://github.com/apache/lucene-solr/blob/master/lucene/core/src/java/org/apache/lucene/util/BytesRef.java), meaning that it supports all the characters of that song that I desperately wanna listen to. No problem for them there. I only typed "ert jordin", however, so how can they successfully return my song?
 
-Well, I'm no big-city developer, but if it were me, I would fold the shit out of that string into ASCII values, and make a lookup on a reverse index.
+Well, I'm no big-city developer, but if it were me, I would fold the shit out of that string into ASCII values, and make a lookup on an inverted index.
 
 And if we try to fold "Þú ert jörðin" to ASCII, we get "THu ert jordin"... how grand!
 
