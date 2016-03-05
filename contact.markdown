@@ -10,7 +10,7 @@ And I'm an Argentine-Italian born in [Las Heras, Mendoza (Argentina)](https://ww
 
 I'll be posting what I think is of interest (to me) very sparingly, as I work and study and writing is nice but takes a long time to be proofreading and making sure that my forever mixed thoughts make any sense, cohesively speaking.
  
-I'm passionate about programming. I praise following standands, but along my posts you'll most of the time see me hacking. Because I love to hack.
+I'm passionate about programming. I praise following standards, but along my posts you'll most of the time see me hacking. Because I love to hack.
 
 I'm always learning, so don't be surprised to find corrections from one post to another. I'll make them clear, because I'm not ashamed of screwing up :)
 
