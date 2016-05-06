@@ -229,7 +229,7 @@ _¿Qué puedo hacer...? :)_
 
 #### Amendments
 
-You can find any and all amendments to this post [here](https://github.com/charlydagos/blog/commits/master/posts/2016-02-20-folding-vs-iconv.markdown).
+You can find any and all amendments to this post [here](https://github.com/charlydagos/blog/commits/master/posts/2016-02-15-on-reversing-strings.markdown).
 
 #### Footnotes
 
