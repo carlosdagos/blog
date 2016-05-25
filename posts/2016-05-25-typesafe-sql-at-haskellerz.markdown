@@ -5,7 +5,7 @@ tags: haskell, sql, talk
 ---
 
 So if [my logo](https://hackage.haskell.org/package/base-4.8.2.0/docs/src/Data.Functor.html#%3C%24%3E)
-was any hint, I’m a huge sucker for Haskell and Functional
+was any hint, I’m a huge sucker for Functional
 Programming in general, and in particular for Haskell. Not too long after
 arriving to Switerland I had the pleasure of, by pure chance, meeting a few
 people who have turned out to be quite influential in a very short time.
@@ -16,7 +16,7 @@ had forgotten about some of the things that I love.
 
 I showed up to the HaskellerZ talk to see a pretty cool talk on
 [common Haskell mistakes](https://www.youtube.com/watch?v=S3WGPuqfBLg).
-After that, being in the awesome city of Zurich, and unable to pass on a beer,
+After that, being in the awesome city of Zürich, and unable to pass on a beer,
 I joined these fine fellas for dinner and drinks and had some great,
 refreshing conversations regarding engineering in general. And upcoming
 concerts, because it’s Zürich.
