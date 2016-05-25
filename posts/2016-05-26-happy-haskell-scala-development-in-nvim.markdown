@@ -113,6 +113,14 @@ And I get autocompletion for Haskell[^scalanotyet]
 <img src="../images/posts_2016-05-26-haskell.png" alt="Haskell Dev" />
 </a>
 
+In the case of Haskell, I had to hack my way through it actually to get it
+to work with deoplete. It uses [`ghc-mod`](https://github.com/DanielG/ghc-mod),
+which was breaking when installed globally with cabal. So I downloaded it
+from github and compiled it from source in a cabal sandbox. Then I just moved
+the executable file to my `~/Librar/Haskell/bin/` path. Problem solved, but
+there's a voice in my head telling me I'll pay in the near future for such
+insolence.
+
 ## Conclusion
 
 The change was fast and painless. It feels like I'm in the same familiar
@@ -137,6 +145,10 @@ Chrome on the same laptop? Not for me.
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1xKZBWQrVc2cG2We4DDbbW" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 
 _If anybody wants to give me a gift, a vinyl of this record would be awesome._
+
+## Amendments
+
+Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-05-26-happy-haskell-scala-development-in-nvim.markdown)
 
 ## Footnotes
 
