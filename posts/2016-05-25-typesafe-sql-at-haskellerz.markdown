@@ -49,4 +49,4 @@ They played in Basel and it was amazing
 
 ## Amendments
 
-Any and all amendments can be found [here]().
+Any and all amendments can be found [here](https://github.com/charlydagos/blog/blob/master/posts/2016-05-25-typesafe-sql-at-haskellerz.markdown).
