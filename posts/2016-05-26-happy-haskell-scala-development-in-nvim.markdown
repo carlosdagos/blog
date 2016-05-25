@@ -140,6 +140,11 @@ IDE works. IDEs can be complex, and on top of that they can, and will, make
 my poor laptop very slow. I don't have infinite RAM so running an IDE _and_
 Chrome on the same laptop? Not for me.
 
+I now have `https`! I used [Let's encrypt](https://letsencrypt.org/). It was
+also a breeze. I know this has very little to do with the rest of the post,
+but I just feel like I need to mention it but don't feel like it deserves its
+own post.
+
 ## Listening to
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1xKZBWQrVc2cG2We4DDbbW" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
