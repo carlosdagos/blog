@@ -42,7 +42,7 @@ I suspected that already but it never hurts to check.
 
 So our source data is coming in `UTF-8`. Upon checking the [database charset](http://www.postgresql.org/docs/9.2/static/multibyte.html), it showed up as [`ISO 8859-1`](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), also known (perhaps incorrectly) as `Latin 1`. It's a character set from the late 80's intended to group most of the European characters, and since [I live](/contact.html) right in the middle of Europe, this makes sense.
 
-However, it's unfortunate, because I'm storing bytes in the database that are meant to be read as `UTF-8`, and the database (and the database clients) will spit them back at me thinking it's `ISO-8859-1`. Hence, unrecognizable characters: &#xFFFD;. 
+However, it's unfortunate, because I'm storing bytes in the database that are meant to be read as `UTF-8`, and the database (and the database clients) will spit them back at me thinking it's `ISO-8859-1`. Hence, unrecognizable characters: &#xFFFD;.
 
 If you still don't know what's going on, let's look at the `hexdump` of that particular string.
 
@@ -108,7 +108,7 @@ This is what a lot of people get wrong about `iconv`, it's not a magic solution 
 
 ### Folding characters
 
-So the solution that we opted for is a bit less known, albeit useful. 
+So the solution that we opted for is a bit less known, albeit useful.
 
 It's called "folding" although I guess you could call it "mapping", or whatever you want. It relies on mapping a character[^charactersnotgliphs] to whatever is "closest" either in shape or meaning. So we went ahead and implemented a fold for it. I called it `foldToISO()` because I'm simply not creative enough.
 
@@ -140,9 +140,9 @@ Well, I'm no big-city developer, but if it were me, I would fold the shit out of
 
 And if we try to fold "Þú ert jörðin" to ASCII, we get "THu ert jordin"... how grand!
 
-Yeah... 
+Yeah...
 
-<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4zo9nVH8uBk5DnUa92ogWn" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4zo9nVH8uBk5DnUa92ogWn" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 
 It just so happens that Lucene comes with an [AsciiFoldingFilter](https://github.com/apache/lucene-solr/blob/master/lucene/analysis/common/src/java/org/apache/lucene/analysis/miscellaneous/ASCIIFoldingFilter.java) right out of the box.
 
