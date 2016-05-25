@@ -31,7 +31,7 @@ everyone who was there either in person or in spirit :)
 
 ## I hate the sound of my own voice
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-h7x1H_PsKA" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-h7x1H_PsKA" frameborder="0" allowfullscreen></iframe>
 
 _Also, I don't think the lower angle favors my [papada](https://en.wikipedia.org/wiki/Double_chin) :|_
 
