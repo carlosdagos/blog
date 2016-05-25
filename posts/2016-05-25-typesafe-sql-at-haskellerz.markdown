@@ -26,6 +26,8 @@ SQL query generation in Haskell, and I, being cheeky, accepted.
 
 The result is below.
 
+It's hella long... if I go at it again I'll make it shorter, promise!
+
 Thanks Alex for offering, Simon for manning the camera and the lights, and
 everyone who was there either in person or in spirit :)
 
