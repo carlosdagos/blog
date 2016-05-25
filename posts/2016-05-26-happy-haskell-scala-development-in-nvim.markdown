@@ -28,7 +28,7 @@ type in a new editor is just an additional layer that is stopping me from many
 developments that I consider have more priority. I haven't fully stopped or
 given up on Emacs just yet, so I could write about that in the future.
 
-It's great however that emacs has [`evil-mode`](https://www.emacswiki.org/emacs/Evil),
+It's great however that Emacs has [`evil-mode`](https://www.emacswiki.org/emacs/Evil),
 which is a vim emulator and goes great lengths to make you familiar with the
 environment even if it's just an initial step there. Another great resource
 would be [Aaron Bieber's video](https://www.youtube.com/watch?v=JWD1Fpdd4Pc).
@@ -97,9 +97,9 @@ pip3 install neovim
 </div>
 
 Which will allow neovim to interact with python. It's important that you have
-pyton3 installed, which is why I'm running `pip3` up there.
+python3 installed, which is why I'm running `pip3` up there.
 
-#### Final result
+## Final result
 
 Not too shabby.
 
@@ -148,7 +148,7 @@ _If anybody wants to give me a gift, a vinyl of this record would be awesome._
 
 ## Amendments
 
-Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-05-26-happy-haskell-scala-development-in-nvim.markdown)
+Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-05-26-happy-haskell-scala-development-in-nvim.markdown).
 
 ## Footnotes
 
