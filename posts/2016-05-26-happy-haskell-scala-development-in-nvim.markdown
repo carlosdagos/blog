@@ -149,7 +149,7 @@ own post.
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1xKZBWQrVc2cG2We4DDbbW" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 
-_If anybody wants to give me a gift, a vinyl of this record would be awesome 😅_
+_If anybody wants to give me a gift, a vinyl of this record would be awesome_ 😅
 
 ## Amendments
 
