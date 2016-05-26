@@ -7,7 +7,7 @@ tags: haskell, sql, talk
 So if [my logo](https://hackage.haskell.org/package/base-4.8.2.0/docs/src/Data.Functor.html#%3C%24%3E)
 was any hint, I’m a huge sucker for Functional
 Programming in general, and in particular for Haskell. Not too long after
-arriving to Switerland I had the pleasure of, by pure chance, meeting a few
+arriving to Switzerland I had the pleasure of, by pure chance, meeting a few
 people who have turned out to be quite influential in a very short time.
 
 I mean, meeting them reminded me that I was already a huge fan of Haskell and
