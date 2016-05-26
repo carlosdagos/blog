@@ -117,7 +117,7 @@ In the case of Haskell, I had to hack my way through it actually to get it
 to work with deoplete. It uses [`ghc-mod`](https://github.com/DanielG/ghc-mod),
 which was breaking when installed globally with cabal. So I downloaded it
 from github and compiled it from source in a cabal sandbox. Then I just moved
-the executable file to my `~/Librar/Haskell/bin/` path. Problem solved, but
+the executable file to my `~/Library/Haskell/bin/` path. Problem solved, but
 there's a voice in my head telling me I'll pay in the near future for such
 insolence.
 
