@@ -223,7 +223,7 @@ table tbody tr:nth-child(2n) {
     background-color: #eee
 }
 .gist table tbody tr:nth-child(2n) {
-		background-color: transparent 
+		background-color: transparent
 }
 table tbody td {
     padding: 5px
@@ -695,7 +695,7 @@ section.container {
 }
 .copyright p,
 .copyright a {
-    color: #aaa;
+    color: #767676;
     font-size: 14px;
     font-weight: 100
 }
