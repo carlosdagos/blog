@@ -101,7 +101,7 @@ python3 installed, which is why I'm running `pip3` up there.
 
 ## Final result
 
-Not too shabby.
+Not too shabby[^fakecode].
 
 <a href="../images/posts_2016-05-26-scala.png">
 <img src="../images/posts_2016-05-26-scala.png" alt="Scala Dev" />
@@ -166,3 +166,5 @@ best "out of the box" solution right now.
 [^thereforthat]: That's what they're there for, right?
 [^scalanotyet]: Scala's not quite there yet for autocompletion but working on
 it.
+[^fakecode]: As always, the code is al play code and/or fake code. Though
+for the Haskell screenshot the code belongs to [that talk I gave :D](/posts/2016-05-25-typesafe-sql-at-haskellerz.html).
