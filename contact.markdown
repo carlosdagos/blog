@@ -36,4 +36,6 @@ Yeah.. what?
 
 ### And... yeah... but only if you want to
 
-<a href="mailto:hey@cdagostino.io">hey@cdagostino.io</a>
+Drop me a line
+
+<a href="mailto:m@cdagostino.io">m@cdagostino.io</a>
