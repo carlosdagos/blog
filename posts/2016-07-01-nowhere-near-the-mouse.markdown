@@ -58,7 +58,8 @@ the relation I've established with it is that it's like using Vim with the
 Vimium makes for a totally different browsing experience, and now I was hardly
 reaching for the mouse. But still there were some other apps I often use which
 either don't lend themselves to easy keyboard-only navigation, or I simply
-just never got accustomed to how the implement them; like Skype, for example.
+just never got accustomed to how they've been implemented; like Skype, for
+example.
 
 #### Gmail shortcuts
 
