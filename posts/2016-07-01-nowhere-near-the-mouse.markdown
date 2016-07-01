@@ -1,5 +1,5 @@
 ---
-title: Random: Nowhere near the mouse lately
+title: "Random: Nowhere near the mouse lately"
 description: Increasing my productivity by being lazy
 tags: random
 ---
@@ -13,7 +13,7 @@ but to make a long story short: they're a bit too bloated for my tastes. I find
 them useful if they're exclusively the best choice for the job, like with Java,
 but aside from that I prefer Vim.
 
-One of the things I like about VIM the most is that I find that, through a
+One of the things I like about Vim the most is that I find that, through a
 little tweaking and fancy plugins, you can start to get a pretty natural feel
 for the control of the editor. Through some practising and trial-and-error,
 you start to overcome the learning curve and gradually become faster and more
@@ -37,14 +37,14 @@ for the mouse for other tasks. Like...
 I use [a borderless version of iTerm2](https://github.com/jaredculp/iterm2-borderless-padding),
 and being iTerm it has its own pane management, which works really nicely and
 I used it for a couple of years. I then started to use tmux because I found
-it easier to configure, and it adapted itself quite easily to vim shortcuts.
+it easier to configure, and it adapted itself quite easily to Vim shortcuts.
 
 I did have a slight learning curve for it, but thanks to the program lending
 itself to [plugins](https://github.com/charlydagos/setup-my-mac/blob/master/dotfiles/tmux/tmux.conf#L40-L51),
 I had a bit of an easier time adjusting.
 
 At this point I was using `vi-style` keystrokes to move the cursor around
-not only in my editor but also throughout my panes and general shell usability.
+not only in my editor but also throughout my panes and general shell usage.
 
 Still not enough, though, because I don't spend all my time in a shell[^hope].
 
@@ -58,7 +58,7 @@ the relation I've established with it is that it's like using Vim with the
 Vimium makes for a totally different browsing experience, and now I was hardly
 reaching for the mouse. But still there were some other apps I often use which
 either don't lend themselves to easy keyboard-only navigation, or I simply
-just never got accustomed to how the implement them; like Sype, for example.
+just never got accustomed to how the implement them; like Skype, for example.
 
 #### Gmail shortcuts
 
@@ -87,6 +87,35 @@ The results are already obvious, enough to motivate me to write about it all.
 
 ### Mandatory screenshots
 
+#### Vimium in action
+
+Using Vimium's function to select the clickable items in the current page:
+
+<a href="/images/posts_2016-07-01-vimium-click-links.png">
+<img src="/images/posts_2016-07-01-vimium-click-links.png" alt="vimium 1" />
+</a>
+
+Using Vimium to switch between tabs, also works with multiple windows open:
+
+<a href="/images/posts_2016-07-01-vimium-switch-tabs.png">
+<img src="/images/posts_2016-07-01-vimium-switch-tabs.png" alt="vimium 2" />
+</a>
+
+#### Shortcat in action
+
+If you just type a dot in the search bar, you get all the options available:
+
+<a href="/images/posts_2016-07-01-shortcat-all-options.png">
+<img src="/images/posts_2016-07-01-shortcat-all-options.png" alt="shortcat 1" />
+</a>
+
+But you can of course just type where you want to go and then select between
+the resulting options:
+
+<a href="/images/posts_2016-07-01-shortcat-selection.png">
+<img src="/images/posts_2016-07-01-shortcat-selection.png" alt="shortcat 2" />
+</a>
+
 ## Conclusion
 
 Upon further reflection, though I'm having a lot of fun, I can't help but
@@ -102,7 +131,8 @@ with some pictures.
 ## Further reading
 
 I don't just use these apps for productivity, there's plenty more that can
-be used, like Alfred, which is quite popular.
+be used, like Alfred, which is quite popular. I also use Snapit, to align
+my windows using the keyboard.
 
 In other \*nix systems there's plenty of other cool, free, tools to be used,
 so if you're not on OS X then look around and
@@ -122,6 +152,10 @@ it thoroughly, so double-album post:
 _Waiting anxiously for that [The Head and The Heart Album](http://www.npr.org/event/music/483901072/watch-the-head-and-the-heart-perform-live-in-the-studio),
 after some disappointments this year, I'm really hoping that they will deliver
 some quality music, as they have done so effecitively and wonderfully thus far._
+
+## Amendments
+
+Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-07-01-nowhere-near-the-mouse.markdown).
 
 ## Footnotes
 
