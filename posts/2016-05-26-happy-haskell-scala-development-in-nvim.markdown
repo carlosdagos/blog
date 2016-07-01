@@ -119,7 +119,7 @@ which was breaking when installed globally with cabal. So I downloaded it
 from github and compiled it from source in a cabal sandbox. Then I just moved
 the executable file to my `~/Library/Haskell/bin/` path. Problem solved, but
 there's a voice in my head telling me I'll pay in the near future for such
-insolence.
+insolence[^update].
 
 ## Conclusion
 
@@ -168,3 +168,5 @@ best "out of the box" solution right now.
 it.
 [^fakecode]: As always, the code is al play code and/or fake code. Though
 for the Haskell screenshot the code belongs to [that talk I gave :D](/posts/2016-05-25-typesafe-sql-at-haskellerz.html).
+[^update]: **Update Jul 1 2016**: Indeed, this has been quite the pain, especially
+with GHC-8 coming out. However, still rockin'... but more hackin'.
