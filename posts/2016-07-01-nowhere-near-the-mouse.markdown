@@ -104,7 +104,7 @@ with some pictures.
 I don't just use these apps for productivity, there's plenty more that can
 be used, like Alfred, which is quite popular.
 
-In other *nix systems there's plenty of other cool, free, tools to be used,
+In other \*nix systems there's plenty of other cool, free, tools to be used,
 so if you're not on OS X then look around and
 [send me a tweet](https://twitter.com/charlydagos) or something!
 
