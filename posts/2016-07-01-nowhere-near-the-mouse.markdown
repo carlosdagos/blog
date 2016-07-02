@@ -132,7 +132,7 @@ with some pictures.
 ## Further reading
 
 I don't just use these apps for productivity, there's plenty more that can
-be used, like Alfred, which is quite popular. I also use Snapit, to align
+be used, like Alfred, which is quite popular. I also use ShiftIt, to align
 my windows using the keyboard.
 
 In other \*nix systems there's plenty of other cool, free, tools to be used,
