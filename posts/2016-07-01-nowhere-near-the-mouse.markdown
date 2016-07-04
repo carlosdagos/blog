@@ -1,5 +1,5 @@
 ---
-title: "Random: Nowhere near the mouse lately"
+title: Randomness - Nowhere near the mouse lately
 description: Increasing my productivity by being lazy
 tags: random
 ---
