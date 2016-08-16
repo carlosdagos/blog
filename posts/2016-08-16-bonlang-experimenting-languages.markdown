@@ -227,13 +227,17 @@ excellent work done in most major programming languages.
 
 ### Further work
 
-- [Syntax support for Atom](https://github.com/charlydagos/language-bonlang),
-is dead easy to get working.
 - Better parser error messages.
 - Better runtime error messages.
 - More primitive functions.
 - Importing other modules.
 - Compile with LLVM, this one should be interesting.
+- [Syntax support for Atom](https://github.com/charlydagos/language-bonlang),
+is dead easy to get working.
+
+<a href="/images/posts_2016-08-16-atom_syntax.png">
+<img src="/images/posts_2016-08-16-atom_syntax.png" alt="Atom syntax is easy" />
+</a>
 
 ## Listening to
 
