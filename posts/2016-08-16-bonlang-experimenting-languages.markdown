@@ -1,5 +1,5 @@
 ---
-title: Experimenting with my own programming language: Bonlang
+title: "Experimenting with my own programming language: Bonlang"
 description: An experiment turned into a learning experience
 tags: zurihac, languages
 ---
@@ -33,7 +33,7 @@ languages.
 ### Choosing a name
 
 It's just a name, to be honest. Though the actual story is that when I was
-thinking about a name, I was also about to have dinner and my roomate said
+thinking about a name, I was also about to have dinner and my roommate said
 "bonap!", which is short for _bonappetit_. So... ¯\\\_(ツ)\_/¯
 
 ### Choosing a style
@@ -60,7 +60,7 @@ come from curry the spices, rather it comes from
 [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry), a great
 mathematician and logician. Though in those links you can find yourself great
 information and follow from there to your heart's content, currying is quite
-simple in usage, and in my opinion teremendously powerful.
+simple in usage, and in my opinion tremendously powerful.
 
 A simple demo of currying is below:
 
@@ -94,7 +94,7 @@ code.
 Programming with functions as first-class citizens means that I can mention an
 identifier in my code referring to a function, and that carries no special
 syntax to refer to it. For example, PHP _does not_ treat functions as first
-class citizens because you have to point to them with a string or a closure.
+class citizens because you have to point to them with a string or use a closure.
 
 <script src="https://gist.github.com/charlydagos/618b4bdc717b891cc546e666d0c08ca3.js"></script>
 
@@ -159,11 +159,15 @@ Support for lambdas:
 
 <script src="https://gist.github.com/charlydagos/8b5d883180dadf04edd5f3b837c02b4c.js"></script>
 
-Here's that SCIP factorial calculation, it performs acutally quite well.
+There's a higher-order function: `map`. I'll add more with time.
+
+<script src="https://gist.github.com/charlydagos/5b1610f025c6c9cf70df42dba8273a97.js"></script>
+
+Here's that SCIP factorial calculation, it performs actually quite well.
 
 <script src="https://gist.github.com/charlydagos/90b87549d2665c6a11ec8c85a5359e83.js"></script>
 
-And here's a sample of a classic recursive fibonacci, which has a terrible
+And here's a sample of a classic recursive Fibonacci, which has a terrible
 performance, but that's kind of the point of this algorithm:
 
 <script src="https://gist.github.com/charlydagos/73df8722f0e1e7cf652331c947205653.js"></script>
@@ -187,6 +191,9 @@ Always read the `README`!
 If you learned/liked anything from this post, make sure to star it so I get a
 little bit of an ego boost :D
 
+As you can see from the description, this all started with ZuriHac! I was a
+mentor along with some cool and clever people. Great event!
+
 ### Quick words on internals
 
 I haven't spoken much about the internals, as this is just an introduction post,
@@ -202,7 +209,7 @@ worked, but had never decided to get my hands dirty with them. This experience
 has definitely taught me a lot about that. Parsec makes it dead easy to make
 your AST, by the way.
 - There's a lot of very subtle decision making that comes when designing your
-own language, but it has huge reprecussion later.
+own language, but it has a huge repercussion later.
 
 Perhaps the best summary of how I feel about it is expressed in this tweet
 by Josh Stella
@@ -214,7 +221,7 @@ There's a huge difference between what you _parse_, that is what the program
 _"says"_, and what the program _means_. And that's where runtime errors come
 in, which add another level of difficulty to the implementation themselves.
 
-I'm not even through realising how hard error messages are, and in that context
+I'm not even through realizing how hard error messages are, and in that context
 one of the biggest lessons from all of this is to not take for granted the
 excellent work done in most major programming languages.
 
@@ -226,7 +233,7 @@ is dead easy to get working.
 - Better runtime error messages.
 - More primitive functions.
 - Importing other modules.
-- Direct compilation to machine code. This one should be interesting.
+- Compile with LLVM, this one should be interesting.
 
 ## Listening to
 
@@ -242,7 +249,7 @@ As is usual, any and all amendments to this post can be found [here](https://git
 
 [^atleastforme]: At least for me, anyway. Normally I will read things all the
 way through before I start to ask questions, or start to wonder about further
-mterial/functionality/etc.
+material/functionality/etc.
 [^simontalk]: On that note, I recommend you watch [Simon Meier's talk on
 commercial Haskell programming](https://www.youtube.com/watch?v=ywOvfjpbYR4).
 I find that his tips, the code shared, and the [style guide](https://github.com/meiersi/HaskellerZ/blob/master/meetups/20160128-A_primer_to_commercial_Haskell_programming/code-by-elevence/docs/hs-style-guide.md),
