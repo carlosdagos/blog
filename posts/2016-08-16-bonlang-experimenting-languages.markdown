@@ -82,8 +82,8 @@ there's no solutions, but I decided to not implement variadic functions[^stillwo
 
 In Haskell, in fact, _all functions take a single parameter_, and simply keep
 returning functions until an actual value is ready to be returned. That is, a
-value that doesn't require any further parameters, which leads me to my next
-feature desired languages.
+value that doesn't require any further parameters, which leads me to the next
+feature desired in languages I normally use.
 
 #### Functions as first-class citizens
 
