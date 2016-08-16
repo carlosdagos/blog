@@ -236,6 +236,8 @@ Saw them recently in a small pub in Karlsruhe!
 
 ## Amendments
 
+As is usual, any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-08-16-bonlang-experimenting-languages.markdown).
+
 ## Footnotes
 
 [^atleastforme]: At least for me, anyway. Normally I will read things all the
