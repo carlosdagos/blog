@@ -1,5 +1,5 @@
 ---
-title: "Experimenting with my own programming language: Bonlang"
+title: Experimenting with my own programming language: Bonlang
 description: An experiment turned into a learning experience
 tags: zurihac, languages
 ---
@@ -145,6 +145,37 @@ equation where you manipulate the parameter functions to your liking.
 Achieving that level of elegance is quite hard from a parser point of view, so
 in Bonlang it's not so nice, I'm afraid.
 
+#### Last but not least: Pattern Matching
+
+Another tremendously powerful feature found in languages like Scala and Haskell,
+but not many Lisps, is Pattern Matching. Below is a quick (trivial) example of
+how that works:
+
+<script src="https://gist.github.com/charlydagos/b1353b6d7198c08c361814c514b04f4f.js"></script>
+
+Where the `_` (underscore) symbol means "whatever", basically. So the method
+`isCarlos` will only return true for a value that matches the "pattern"
+specified in the first binding.
+
+There is one Lisp flavor that has pattern matching, though it's not as complex
+as Haskell's. It's [Shen](http://www.shenlanguage.org/)[^shen], and below is an
+example of how you'd reverse a list in Haskell and in Shen[^notoptimal], using
+pattern matching:
+
+_In Haskell:_
+
+<script src="https://gist.github.com/charlydagos/8f3d0c6da834ecb9827c09fe5c1d7bb9.js"></script>
+
+_In Shen:_
+
+<script src="https://gist.github.com/charlydagos/65705dcf094cafb82dc2b1def7ad28f4.js"></script>
+
+While I'm still adding pattern matching and it's not in any of the examples
+below, I think that I'll attempt first to pattern match closer to Shen than to
+Haskell, especially since in Bonlang I still don't have custom data types.
+
+More on Shen pattern matching [here](http://www.shenlanguage.org/learn-shen/functions/functions_pattern_matching.html).
+
 ### Some code examples
 
 While that's not the complete list of elements found in Bonlang, I believe
@@ -262,3 +293,9 @@ are quite comprehensive and have helped a lot these past few months.
 [^stillworking]: Though in the code examples there's still some legacy examples
 with some variadic functions, I'm removing those; and it only works for
 primitives.
+[^notoptimal]: Keep in mind these implementations are not optimal. In the Haskell
+example, we're appending a single-element list to the reversed tail of the
+current list, in Haskell this is an `O(n)` operation where `n` is the length of
+the first argument and we're doing this for all elements of the list!
+[^shen]: I've barely mentioned Shen here and that's because I'm still quite new
+to it, but it's very functional and seemingly has a lot of great features.
