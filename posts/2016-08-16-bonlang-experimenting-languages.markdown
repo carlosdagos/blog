@@ -194,6 +194,11 @@ There's a higher-order function: `map`. I'll add more with time.
 
 <script src="https://gist.github.com/charlydagos/5b1610f025c6c9cf70df42dba8273a97.js"></script>
 
+Combining currying with higher order functions, `addFive` is a partial
+application of adding (`+`), with the number 5.
+
+<script src="https://gist.github.com/charlydagos/e674d68f2713dcf572ced1f2312cc8d6.js"></script>
+
 Here's that SCIP factorial calculation, it performs actually quite well.
 
 <script src="https://gist.github.com/charlydagos/90b87549d2665c6a11ec8c85a5359e83.js"></script>
@@ -290,9 +295,9 @@ commercial Haskell programming](https://www.youtube.com/watch?v=ywOvfjpbYR4).
 I find that his tips, the code shared, and the [style guide](https://github.com/meiersi/HaskellerZ/blob/master/meetups/20160128-A_primer_to_commercial_Haskell_programming/code-by-elevence/docs/hs-style-guide.md),
 are quite comprehensive and have helped a lot these past few months.
 [^pun]: I had to make the pun, sorry.
-[^stillworking]: Though in the code examples there's still some legacy examples
+[^stillworking]: ~~Though in the code examples there's still some legacy examples
 with some variadic functions, I'm removing those; and it only works for
-primitives.
+primitives.~~ **UPDATE:** I've removed all variadic functions.
 [^notoptimal]: Keep in mind these implementations are not optimal. In the Haskell
 example, we're appending a single-element list to the reversed tail of the
 current list, in Haskell this is an `O(n)` operation where `n` is the length of
