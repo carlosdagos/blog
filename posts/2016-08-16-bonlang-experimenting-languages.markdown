@@ -153,9 +153,9 @@ how that works:
 
 <script src="https://gist.github.com/charlydagos/b1353b6d7198c08c361814c514b04f4f.js"></script>
 
-Where the `_` (underscore) symbol means "whatever", basically. So the method
-`isCarlos` will only return true for a value that matches the "pattern"
-specified in the first binding.
+Where the `_` (underscore) symbol means "whatever" (otherwise known as a
+_wildcard pattern_). So the method `isCarlos` will only return true for a value
+that matches the "pattern" specified in the first binding.
 
 There is one Lisp flavor that has pattern matching, though it's not as complex
 as Haskell's. It's [Shen](http://www.shenlanguage.org/)[^shen], and below is an
