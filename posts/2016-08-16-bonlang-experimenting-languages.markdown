@@ -44,7 +44,7 @@ Lisp(s), Scala, and of course Haskell.
 #### Variadic functions... or lack thereof
 
 In regards to Lisp, I first wanted to have variadic functions, that is,
-functions that have indefinite arity (number of parameters). For example,
+functions that have indefinite arity (number of arguments). For example,
 in Clojure (a Lisp for the JVM), and in most Lisp flavors you can do:
 
 <script src="https://gist.github.com/charlydagos/fc805032f833009166a62eb310ca5d38.js"></script>
@@ -77,12 +77,12 @@ Bonlang behaves like Haskell in this regard (superficially, not internally).
 
 You can however see how it's hard to combine variadic functions with automatic
 currying; in other words: _how do you manage automatic partial function
-application when you have an indefinite amount of parameters?_ That's not to say
+application when you have an indefinite amount of arguments?_ That's not to say
 there's no solutions, but I decided to not implement variadic functions[^stillworking].
 
 In Haskell, in fact, _all functions take a single parameter_, and simply keep
 returning functions until an actual value is ready to be returned. That is, a
-value that doesn't require any further parameters, which leads me to the next
+value that doesn't require any further arguments, which leads me to the next
 feature desired in languages I normally use.
 
 #### Functions as first-class citizens
@@ -121,11 +121,11 @@ once we're done with a specific procedure.
 
 That's the purpose of lambdas, unnamed functions that can be assigned to a local
 identifier, or simply used as a parameter of other higher order functions
-(i.e.: functions that take other functions as parameters); like
+(i.e.: functions that take other functions as arguments); like
 [_map_](https://clojuredocs.org/clojure.core/map).
 
-In Bonlang, of course, I decided to add support for lambdas. In fact, a there's
-no such thing as a function, but internally it assigns closures to identifiers
+In Bonlang, of course, I decided to add support for lambdas. In fact, there's
+no such thing as a function, but internally it binds closures to identifiers
 in a somewhat-generalised scope (more on that on later posts).
 
 As a demo of a lambda, here's one of my favorite code snippets. It calculates
@@ -140,7 +140,7 @@ Haskell:
 <script src="https://gist.github.com/charlydagos/7ba1e4384527880af498e0fd0567e7e9.js"></script>
 
 If you can't see it, it's as easy as `\param1 param2 -> ...` where `...` is an
-equation where you manipulate the parameter functions to your liking.
+equation where you manipulate the function arguments to your liking.
 
 Achieving that level of elegance is quite hard from a parser point of view, so
 in Bonlang it's not so nice, I'm afraid.
