@@ -208,9 +208,6 @@ performance, but that's kind of the point of this algorithm:
 
 <script src="https://gist.github.com/charlydagos/73df8722f0e1e7cf652331c947205653.js"></script>
 
-If you're familiar with the languages which I have been mentioning, you'll see
-how where a lot of the inspiration comes from.
-
 Lastly, this is an example that I really like, and if you're a SICP person
 you'll recognize it. You can check the reference material
 [here](https://mitpress.mit.edu/sicp/full-text/sicp/book/node30.html).
@@ -222,6 +219,11 @@ Effectively, with support for lambdas we can create _pairs_.
 
 This is one of my favorite examples and it is, as the book says, mind-boggling.
 
+#### That's it for now
+
+If you're familiar with the languages which I have been mentioning, you'll see
+how where a lot of the inspiration comes from.
+
 Mainly, I think, is the fact that function application is done with the `$`
 symbol, and using [Polish/prefix notation](https://en.wikipedia.org/wiki/Polish_notation)
 like in Lisp. I did it like this because it's really easy to implement a parser
@@ -232,7 +234,12 @@ work in progress.
 
 Always read the `README`!
 
-<blockquote class="embedly-card" data-card-key="cf9dee0ccfe8485e9df6cf6f4c5065f4" data-card-type="article"><h4><a href="https://github.com/charlydagos/bonlang">charlydagos/bonlang</a></h4><p>bonlang - Minimalist language created at ZuriHac 2016 in Zurich, CH</p></blockquote>
+<blockquote class="embedly-card" data-card-key="cf9dee0ccfe8485e9df6cf6f4c5065f4" data-card-type="article">
+<h4>
+<a href="https://github.com/charlydagos/bonlang">charlydagos/bonlang</a>
+</h4>
+<p>bonlang - Minimalist language created at ZuriHac 2016 in Zurich, CH</p>
+</blockquote>
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 If you learned/liked anything from this post, make sure to star it so I get a
@@ -261,7 +268,9 @@ own language, but it has a huge repercussion later.
 Perhaps the best summary of how I feel about it is expressed in this tweet
 by Josh Stella
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Syntax is easy. Semantics are where it gets interesting.</p>&mdash; Josha Stella (@joshstella) <a href="https://twitter.com/joshstella/status/729365335481126914">May 8, 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">Syntax is easy. Semantics are where it gets interesting.</p>&mdash; Josha Stella (@joshstella) <a href="https://twitter.com/joshstella/status/729365335481126914">May 8, 2016</a>
+</blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 There's a huge difference between what you _parse_, that is what the program
