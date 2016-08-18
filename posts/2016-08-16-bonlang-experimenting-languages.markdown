@@ -93,8 +93,8 @@ code.
 
 Programming with functions as first-class citizens means that I can mention an
 identifier in my code referring to a function, and that carries no special
-syntax to refer to it. For example, PHP _does not_ treat functions as first
-class citizens because you have to point to them with a string or use a closure.
+syntax. For example, PHP _does not_ treat functions as first class citizens
+because you have to point to them with a string or use a closure.
 
 <script src="https://gist.github.com/charlydagos/618b4bdc717b891cc546e666d0c08ca3.js"></script>
 
@@ -199,7 +199,7 @@ application of adding (`+`), with the number 5.
 
 <script src="https://gist.github.com/charlydagos/e674d68f2713dcf572ced1f2312cc8d6.js"></script>
 
-Here's that SCIP factorial calculation, it performs actually quite well.
+Here's that SICP factorial calculation, it performs actually quite well.
 
 <script src="https://gist.github.com/charlydagos/90b87549d2665c6a11ec8c85a5359e83.js"></script>
 
@@ -210,6 +210,17 @@ performance, but that's kind of the point of this algorithm:
 
 If you're familiar with the languages which I have been mentioning, you'll see
 how where a lot of the inspiration comes from.
+
+Lastly, this is an example that I really like, and if you're a SICP person
+you'll recognize it. You can check the reference material
+[here](https://mitpress.mit.edu/sicp/full-text/sicp/book/node30.html).
+
+The purpose of the example is to show that data can take the form of procedures.
+Effectively, with support for lambdas we can create _pairs_.
+
+<script src="https://gist.github.com/charlydagos/88800cbe7f8ba8b546a4c7cdb763cc34.js"></script>
+
+This is one of my favorite examples and it is, as the book says, mind-boggling.
 
 Mainly, I think, is the fact that function application is done with the `$`
 symbol, and using [Polish/prefix notation](https://en.wikipedia.org/wiki/Polish_notation)
