@@ -1,5 +1,5 @@
 ---
-title: "Experimenting with my own programming language: Bonlang"
+title: Experimenting with my own programming language: Bonlang
 description: An experiment turned into a learning experience
 tags: zurihac, languages
 ---

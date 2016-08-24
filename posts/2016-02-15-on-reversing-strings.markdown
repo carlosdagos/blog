@@ -6,6 +6,8 @@ tags: unicode, emoji, interviews
 
 _This post may not display 100% correct on your computer, some glyphs may be missing._
 
+## Intro
+
 One time, during an interview I was asked:
 
 <div class="quote">
@@ -20,11 +22,11 @@ I even took it to my shell and tested it...
 
 <script src="https://gist.github.com/charlydagos/5b9f4dd3d7184668ee6b.js"></script>
 
-I rule! 
+I rule!
 
 Right?
 
-## Not so..
+## Not good enough
 
 So this where maybe the prefix "naive\_" makes sense for the gists up there. You see, the question is NOT "can you iterate over a string and generate a new one?". What they wanted to see is if I knew how the language I chose (in this case, php) handles encodings. [Because encodings are very important](http://www.joelonsoftware.com/articles/Unicode.html)[^joel].
 
@@ -38,7 +40,7 @@ Let's start by looking at the request in parts.
 
 1) I must write 🤔
 2) I have one (1) input, and it's of type `string`
-3) I have one (1) output, and it's of type `string`, but it's reversed 
+3) I have one (1) output, and it's of type `string`, but it's reversed
 </div>
 
 Seemingly I complied with everything.. Until I go and test the next code...
@@ -59,7 +61,7 @@ Let's look at the following string.
 
 And let's run some `str` functions over it, like [`strlen`](http://php.net/strlen), [`substr`](http://php.net/substr), and [`str_split`](http://php.net/str_split).
 
-Before we get to any code, let's think about what that output should be. 
+Before we get to any code, let's think about what that output should be.
 
 Let's count `char`s...
 
@@ -67,7 +69,7 @@ Let's count `char`s...
 
 Let's get that `substr`
 
-	echo substr($str, 18 /* start at C */, 8); // get 8 characters, so return "Carlos 🤔"	
+	echo substr($str, 18 /* start at C */, 8); // get 8 characters, so return "Carlos 🤔"
 
 And let's split that string into an array using `str_split`
 
@@ -126,7 +128,7 @@ So... what _are_ we being asked here? I suppose that a regular interviewer would
 Write a function that given a string input will output a reversed version of glyphs
 </div>
 
-That's more like it! Getting to be a little bit clearer! 
+That's more like it! Getting to be a little bit clearer!
 
 ### Multibyte strings
 
@@ -140,7 +142,7 @@ In PHP you can also do `echo getenv('LC_ALL');`
 
 So, are we to an easier solution to the problem?
 
-Yeah. 
+Yeah.
 
 ### Enter [Multibyte functions!](http://php.net/manual/en/mbstring.supported-encodings.php)
 
@@ -148,7 +150,7 @@ I did say that php will support any string in any encoding, but not right away. 
 
 Using those functions as a reference and with a very impatient mindset, I just do the ballsy thing and type out a new script, with two functions: one that is simple, using your good'ol `str`-based functions, and another one using our new friends the `mb`-based functions. I also make it a php cli script because I can...
 
-<script src="https://gist.github.com/charlydagos/0c9981aa4e879af00ef3.js"></script> 
+<script src="https://gist.github.com/charlydagos/0c9981aa4e879af00ef3.js"></script>
 
 And after running this on our [favorite shell](https://www.iterm2.com/), we get the output:
 
@@ -158,7 +160,7 @@ Eureka!
 
 **Except no**.
 
-<script src="https://gist.github.com/charlydagos/a1b2306c241e0127703a.js"></script> 
+<script src="https://gist.github.com/charlydagos/a1b2306c241e0127703a.js"></script>
 
 If you highlight the last line, you can see that it didn't rotate the Swiss flag glyph and the Argentina flag glyph. It just returned this shit[^invisible]
 
@@ -178,7 +180,7 @@ So our family of `mb` functions isn't going to cut it if we want to reverse glyp
 
 This is why UTF-8 became famous in the first place[^doit], it successfully leveraged ASCII fanatics (looking at you, people from the US) with all of us foreigners with our á and ê and ç characters that confuse the living shit out of people who've never left their hometown of Sandy, Utah.
 
-So just because we encountered these glyphs, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^vim], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html). 
+So just because we encountered these glyphs, doesn't mean that we've stopped there. We can try to keep going. If we check `mb_strlen` for "🇨🇭"[^vim], you'd see that the result is `2`. This, again, is correct! But not really what we're looking for, since to us, tiny dumb humans, this is a single glyph. If I hit delete, I want to hit it once and not twice. I expect software to work this way, and [not confuse me](https://www.sensible.com/dmmt.html).
 
 So then, grapheme clusters, you say?
 
@@ -202,14 +204,14 @@ And, at long last...
 
 I've learned that this simple, seemingly innocuous question is not a "stand up and solve it now"-style of question, but rather one that should yield a conversation with your potential employer. Ask them exactly what they mean, what they want, and let them know that you can hold your own when it comes to encodings :)
 
-Reflecting upon it, I've seen many stacks using stantard `str`-based functions in low level layers, and that they may be potentially returning the wrong values. Think about it, I've been using emojis throughout this blog post because they've become so commonplace that we *expect* software to accept them, when they don't we get pissed! At least _I do!_ But the "problem" doesn't limit itself to emojis. By ignoring these types of things, you're making your software unusable to certain users, and in the end you're losing money. Your product is less valuable than the one made by guys and gals who *do* support Japanese, Czech, Hungarian, etc, characters. Those who made that communication platform that supports emojis can now market their product with a bit more... *pizzazz*. 
+Reflecting upon it, I've seen many stacks using stantard `str`-based functions in low level layers, and that they may be potentially returning the wrong values. Think about it, I've been using emojis throughout this blog post because they've become so commonplace that we *expect* software to accept them, when they don't we get pissed! At least _I do!_ But the "problem" doesn't limit itself to emojis. By ignoring these types of things, you're making your software unusable to certain users, and in the end you're losing money. Your product is less valuable than the one made by guys and gals who *do* support Japanese, Czech, Hungarian, etc, characters. Those who made that communication platform that supports emojis can now market their product with a bit more... *pizzazz*.
 
 The problem is **far, far** more reaching than your code. You'll encounter issues starting on your clients' devices, then hitting your web servers, then your applications, then your storage layers... It's a tremendous task, so keep that in mind next time someone sends you a funny pic on Whatsapp and you reply with a simple "😂😂😂". Think about the genius work that it took before those three glyphs could show up on your screen and be sent to your mates :)
 
-## Considerations
+### Considerations
 
 - Performance: It's quite intuitive, but for the sake of completeness just skim over [the file that implements `grapheme`-based functions](https://github.com/cataphract/PECL-intl/blob/master/grapheme/grapheme_string.c). This means that you **should not** _always_ use these, **because they're slower**. Nor should you _always_ use `mb`-based functions. Rather, think about the context of the code you're writing, and think about what makes sense where.
-- i18n: If you want your software to be even mildly international, plan for these types of things! 
+- i18n: If you want your software to be even mildly international, plan for these types of things!
 
 And that's it. We're done, go ace, at least, this interview question. Or apply it in some context. Or [drop me a line!](/contact.html) I can't guarantee that I'll be available, or that I'll ever answer, or that I'll care, but I'll appreciate it to some extent anyway.
 
@@ -227,11 +229,11 @@ And that's it. We're done, go ace, at least, this interview question. Or apply i
 
 _¿Qué puedo hacer...? :)_
 
-#### Amendments
+## Amendments
 
 You can find any and all amendments to this post [here](https://github.com/charlydagos/blog/commits/master/posts/2016-02-15-on-reversing-strings.markdown).
 
-#### Footnotes
+## Footnotes
 
 [^joel]: I interviewed for a Joel Spolsky-owned company. I totally bombed it and I knew it right there and then. They didn't ask me this question, fyi :) He is, regardless, one of the most influential people on my reading lists, for both good and bad reasons. Clever guy, that Joel.
 [^access]: This means that we can access a `char` of the string directly. This would be exactly like doing [`substr($string, $i, 1)`](http://php.net/substr);

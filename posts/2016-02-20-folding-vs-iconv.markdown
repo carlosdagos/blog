@@ -175,14 +175,14 @@ So what about `//IGNORE`? Well, you're ignoring the problem altogether, so it's 
 - "Folding" has its advantages.
 - The world is not Unicode.
 
-## Considerations
+### Considerations
 
 - I don't know if I'll be writing more on character sets, because I think that two blog posts about this has exhausted the subject a little bit.
 - The `LC_ALL` environment variable can give you issues when running some shell programs. A quick-and-dirty solution is to prefix the variable definition before the execution of a certain program. Like so... `$ LC_ALL=C myprogram --flag=whatever`.
 - Have you [learned your encoding?](/images/didyoudoit.jpg)
 - Soon enough I'll be posting the code that does the folding :)
 
-## Resources and more reading
+### Resources and more reading
 
 - [`UTF-8` chartable](http://www.utf8-chartable.de/)
 - [`UTF-8` implementation and resources](http://unicode.org/resources/utf8.html)
@@ -195,11 +195,11 @@ Actually on vinyl, but here's the Spotify link :)
 
 _Thanks for the gift :)_
 
-### Amendments
+## Amendments
 
 Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-02-20-folding-vs-iconv.markdown).
 
-### Footnotes
+## Footnotes
 
 [^hipsters]: In fact, it's a bit annoying how "working in a totally new and up-to-date environment" can even be considered a benefit (I'm looking at you, Stack Overflow Careers...). Before moving to Basel, I worked for a company with a brilliant colleague who introduced me to the theme of the [Programming hipsters](http://www.urbandictionary.com/define.php?term=programming+hipster). Mostly because I behaved like one as well. I've come to find out that in real life you're gonna find old-as-shit systems and you're gonna have to deal with it. It's not all Unicode, not every language will treat your functions as first class citizens, you won't always have a readily-available MongoDB cluster to put into production. In my last job, our customers were using feature phones. You know what a feature phone is? It's what came before smart phones. They're dumb phones. You couldn't reliably determine who had JavaScript available and who didn't. Even if you could, it would be version 1.7, or 1.5, and you'd have to plan for all of that.
 [^fakedata]: I'm obviously not going to use real data. This is fake data. In Hungarian it means "Beautiful cup". I like cups. I have a few that are really nice.
