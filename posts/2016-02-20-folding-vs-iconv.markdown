@@ -10,7 +10,7 @@ Had a bit of a problem recently and it fit perfectly with my previous post about
 
 The application we're working on pulls mission-critical information from an API. This information is then stored in the a database and used for Customer Support, shipping, after-sale services, so on and so forth. Basically, it's really important information.
 
-Now, as it usually happens, some of the systems that make the entire operation are a bit.. _outdated_. Nothing wrong with that[^hipsters]. But when doing our integration tests, we noticed that what in the API looked like[^fakedata]...
+Now, as it usually happens, some of the systems that make the entire operation are a bit.. _outdated_. Nothing wrong with that. But when doing our integration tests, we noticed that what in the API looked like[^fakedata]...
 
 <div class="success">
 Gyönyörű Bögre
@@ -24,7 +24,7 @@ Gy&#xFFFD;ny&#xFFFD;r? B&#xFFFD;gre
 
 ### So what's going on here?
 
-If you first read [my first blog post](/posts/2016-02-15-on-reversing-strings.html)[^omg], you'll have some intuition of what's happening. But since you're lazy, and so am I, then let's break it down.
+If you first read [my first blog post](/posts/2016-02-15-on-reversing-strings.html), you'll have some intuition of what's happening. But since you're lazy, and so am I, then let's break it down.
 
 - The original data comes from an API source. The text looks OK.
 - That data is retrieved and then stored in a database for the client. The text is garbled or otherwise unreadable.
@@ -201,10 +201,8 @@ Any and all amendments to this post can be found [here](https://github.com/charl
 
 ## Footnotes
 
-[^hipsters]: In fact, it's a bit annoying how "working in a totally new and up-to-date environment" can even be considered a benefit (I'm looking at you, Stack Overflow Careers...). Before moving to Basel, I worked for a company with a brilliant colleague who introduced me to the theme of the [Programming hipsters](http://www.urbandictionary.com/define.php?term=programming+hipster). Mostly because I behaved like one as well. I've come to find out that in real life you're gonna find old-as-shit systems and you're gonna have to deal with it. It's not all Unicode, not every language will treat your functions as first class citizens, you won't always have a readily-available MongoDB cluster to put into production. In my last job, our customers were using feature phones. You know what a feature phone is? It's what came before smart phones. They're dumb phones. You couldn't reliably determine who had JavaScript available and who didn't. Even if you could, it would be version 1.7, or 1.5, and you'd have to plan for all of that.
 [^fakedata]: I'm obviously not going to use real data. This is fake data. In Hungarian it means "Beautiful cup". I like cups. I have a few that are really nice.
-[^omg]: omg I'm actually referring to myself already. [I feel like a total author right now, guys](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)!
-[^fakedataagain]: Again, I'm using fake data for this post. I'll probably be using fake data on all posts.
+[^fakedataagain]: Again, I'm using fake data for this post.
 [^utfeightvariable]: But you know that `UTF-8` is a variable-length encoding already, because you read that [first post](/posts/2016-02-15-on-reversing-strings.html). [Right?](/images/didyoudoit.jpg)
 [^poorhungary]: [https://en.wikipedia.org/wiki/ISO/IEC_8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1), look at the "Missing characters" section for Hungarian.
 [^tryityourself]: Try it for yourself, try different combinations, etc :D
