@@ -170,10 +170,6 @@ _In Shen:_
 
 <script src="https://gist.github.com/charlydagos/65705dcf094cafb82dc2b1def7ad28f4.js"></script>
 
-While I'm still adding pattern matching and it's not in any of the examples
-below, I think that I'll attempt first to pattern match closer to Shen than to
-Haskell, especially since in Bonlang I still don't have custom data types.
-
 More on Shen pattern matching [here](http://www.shenlanguage.org/learn-shen/functions/functions_pattern_matching.html).
 
 ### Some code examples
@@ -199,7 +195,7 @@ application of adding (`+`), with the number 5.
 
 <script src="https://gist.github.com/charlydagos/e674d68f2713dcf572ced1f2312cc8d6.js"></script>
 
-Here's that SICP factorial calculation, it performs actually quite well.
+Here's that SICP factorial calculation:
 
 <script src="https://gist.github.com/charlydagos/90b87549d2665c6a11ec8c85a5359e83.js"></script>
 
@@ -207,6 +203,10 @@ And here's a sample of a classic recursive Fibonacci, which has a terrible
 performance, but that's kind of the point of this algorithm:
 
 <script src="https://gist.github.com/charlydagos/73df8722f0e1e7cf652331c947205653.js"></script>
+
+The language features pattern matching on a primitive level
+
+<script src="https://gist.github.com/charlydagos/c11a61dbf19c9686d7954009ad484539.js"></script>
 
 Lastly, this is an example that I really like, and if you're a SICP person
 you'll recognize it. You can check the reference material
