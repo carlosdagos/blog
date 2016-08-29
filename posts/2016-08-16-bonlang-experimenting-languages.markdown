@@ -1,5 +1,5 @@
 ---
-title: "Experimenting with my own programming language: Bonlang"
+title: Experimenting with my own programming language: Bonlang
 description: An experiment turned into a learning experience
 tags: zurihac, languages
 ---
@@ -258,24 +258,16 @@ more fun parts of the language.
 
 Definitely a lot, but the most mentionable are:
 
-- I had an idea of how [Abstract Syntax Trees](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
+I had an idea of how [Abstract Syntax Trees](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 worked, but had never decided to get my hands dirty with them. This experience
-has definitely taught me a lot about that. Parsec makes it dead easy to make
-your AST, by the way.
-- There's a lot of very subtle decision making that comes when designing your
-own language, but it has a huge repercussion later.
-
-Perhaps the best summary of how I feel about it is expressed in this tweet
-by Josh Stella
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">Syntax is easy. Semantics are where it gets interesting.</p>&mdash; Josha Stella (@joshstella) <a href="https://twitter.com/joshstella/status/729365335481126914">May 8, 2016</a>
-</blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+has definitely taught me a lot about that. Parsec goes a long way towards
+reading text into an AST.
 
 There's a huge difference between what you _parse_, that is what the program
-_"says"_, and what the program _means_. And that's where runtime errors come
+_says_, and what the program _means_. And that's where runtime errors come
 in, which add another level of difficulty to the implementation themselves.
+In other words, I can say `val sum = + $ x "a"`, which is syntactically correct,
+but it doesn't make sense semantically.
 
 I'm not even through realizing how hard error messages are, and in that context
 one of the biggest lessons from all of this is to not take for granted the
