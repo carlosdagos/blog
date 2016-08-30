@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Just save myself some time 
+# Just save myself some time
 
 echo "Cleaning..."
-./site clean > /dev/null
+stack exec site clean > /dev/null
 
 echo "Rebuilding"
-./site rebuild > /dev/null
+stack exec site rebuild > /dev/null
 
 endpoint=cdagostino.io:/var/www/cdagostino.io
 
-\rsync -ra _site $endpoint 
+\rsync -ra _site $endpoint
 if [ $? -eq 0 ]; then
   echo "Deployed! Visit http://cdagostino.io"
 else
