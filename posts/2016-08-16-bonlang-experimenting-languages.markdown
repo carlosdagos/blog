@@ -279,7 +279,6 @@ excellent work done in most major programming languages.
 - Better runtime error messages.
 - More primitive functions.
 - Importing other modules.
-- Compile with LLVM, this one should be interesting.
 - [Syntax support for Atom](https://github.com/charlydagos/language-bonlang),
 is dead easy to get working.
 
