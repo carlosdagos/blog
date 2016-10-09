@@ -184,6 +184,7 @@ body {
     line-height: 1.6;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
 }
+.carlos ul,
 ul.nav,
 ul.post-list {
     margin: 0;
@@ -688,9 +689,24 @@ section.container {
         margin: 2em 10px
     }
 }
-.copyright {
-    margin: 4em 0;
+.bottom-info {
+    margin: 4em 0 0 0;
     border-top: 1px solid #ddd;
+    text-align: center
+}
+.bottom-info p,
+.bottom-info a {
+    color: #767676;
+    font-size: 14px;
+    font-weight: 100
+}
+.bottom-info a:hover {
+    color: #888
+}
+
+.copyright {
+    margin: 0 0 4em 0;
+    border-top: 1px solid #eee;
     text-align: center
 }
 .copyright p,
@@ -701,4 +717,31 @@ section.container {
 }
 .copyright a:hover {
     color: #888
+}
+
+.carlos a {
+    font-weight: bold;
+}
+.carlos .left {
+    float: left;
+    width: 50%;
+}
+.carlos .right {
+    float: right;
+    width: 50%;
+}
+.carlos img {
+    max-width: 100%;
+    height: auto;
+}
+.carlos:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 480px) {
+    .carlos .left, .carlos .right {
+        float: none;
+        width: auto;
+    }
 }

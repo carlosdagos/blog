@@ -34,4 +34,4 @@ Yeah.. what?
 
 ## Drop me a line
 
-<a href="mailto:m@cdagostino.io">m@cdagostino.io</a>
+<a href="mailto:m@cdagostino.io">m@cdagostino.io</a> (<a target="_blank" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xE7249D28C6D2BCB4">0xC6D2BCB4</a>)
