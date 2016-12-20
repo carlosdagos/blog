@@ -85,5 +85,5 @@ _I think I'm getting old: I'm actually enjoying Christmas._
 
 ## Amendments
 
-As is usual, any and all amendments to this post can be found [here]().
+As is usual, any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-12-20-purescript-malaga-surfing.markdown).
 
