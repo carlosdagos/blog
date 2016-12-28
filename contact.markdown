@@ -8,7 +8,7 @@ My name is Carlos.
 
 I'm an Argentine-Italian born in [Las Heras, Mendoza (Argentina)](https://www.google.com/search?site=&tbm=isch&source=hp&q=mendoza+argentina) circa 1989. I grew up in the US and Spain. I got my BSc. in Computer Science at the [University of Málaga (Spain)](http://www.uma.es/etsi-informatica/?set_language=en).
 
-Now I live in Basel, Switzerland, but depending on the time of the year you can find me in Zürich, Köln, Freiburg, or the Maldives. I work as a Freelancer on various projects making, fixing, and maintaining software.
+Now I live in Germany and Spain, depending the time of the year.
 
 I'll be posting what I think is of interest (to me) very sparingly, as I work and study and writing is nice but takes a long time to be proofreading and making sure that my forever mixed thoughts make any sense, cohesively speaking.
 
@@ -16,21 +16,16 @@ I'm always learning, so don't be surprised to find corrections from one post to 
 
 ## You can stalk me
 
-#### [Github](https://github.com/charlydagos)
+Here's a list of all the places where you can refer to me. I'm trying to change
+my long-term handle on websites, so perhaps these will break at some point. I
+hardly make my social media about computers, but I really like music and
+surfing, so I (re)post a lot about that.
 
-Some code I upload on my free time.
-
-#### [Instagram](https://www.instagram.com/charlydagos)
-
-I will mostly just post pictures taken with my low-end phone about some of my hobbies and interests. I hardly make my social media about computers.
-
-#### [Twitter](https://twitter.com/charlydagos)
-
-I will mostly just post whatever I'm listening to, or stuff almost related to computers, or not.
-
-#### [Last.fm](http://www.last.fm/user/charlydagos)
-
-Yeah.. what?
+- [**Github**](https://github.com/charlydagos) - Some code.
+- [**LinkedIn**](https://www.linkedin.com/in/carlos-dagostino) - ¯\\\_(ツ)\_/¯
+- [**Instagram**](https://www.instagram.com/charlydagos) - Postureo.
+- [**Twitter**](https://twitter.com/charlydagos) - Music, maybe some funnies.
+- [**Last.fm**](http://www.last.fm/user/charlydagos) - Music.
 
 ## Drop me a line
 
