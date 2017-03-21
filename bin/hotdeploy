@@ -10,6 +10,9 @@ stack exec site rebuild > /dev/null
 
 endpoint=cdagostino.io:/var/www/cdagostino.io
 
+# Copy this file for keybase
+cp keybase.txt _site/keybase.txt
+
 \rsync -ra _site $endpoint
 if [ $? -eq 0 ]; then
   echo "Deployed! Visit http://cdagostino.io"
