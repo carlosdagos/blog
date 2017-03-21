@@ -19,7 +19,7 @@ I decided to have a few words regarding PureScript.
 The talk is oriented towards practicality and hitting the ground running should
 anybody decide to get their hands dirty with PureScript:
 
-<blockquote class="embedly-card" data-card-key="cf9dee0ccfe8485e9df6cf6f4c5065f4" data-card-type="article"><h4><a href="https://github.com/charlydagos/purescript-malaga-demo">charlydagos/purescript-malaga-demo</a></h4><p>purescript-malaga-demo - Material for PureScript talk in Málaga - 20 Dec 2016</p></blockquote>
+<blockquote class="embedly-card" data-card-key="cf9dee0ccfe8485e9df6cf6f4c5065f4" data-card-type="article"><h4><a href="https://github.com/carlosdagos/purescript-malaga-demo">carlosdagos/purescript-malaga-demo</a></h4><p>purescript-malaga-demo - Material for PureScript talk in Málaga - 20 Dec 2016</p></blockquote>
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 Inside you will find some sample code along with the slides in PDF format.
@@ -85,5 +85,5 @@ _I think I'm getting old: I'm actually enjoying Christmas._
 
 ## Amendments
 
-As is usual, any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-12-20-purescript-malaga-surfing.markdown).
+As is usual, any and all amendments to this post can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-12-20-purescript-malaga-surfing.markdown).
 

@@ -47,7 +47,7 @@ In regards to Lisp, I first wanted to have variadic functions, that is,
 functions that have indefinite arity (number of arguments). For example,
 in Clojure (a Lisp for the JVM), and in most Lisp flavors you can do:
 
-<script src="https://gist.github.com/charlydagos/fc805032f833009166a62eb310ca5d38.js"></script>
+<script src="https://gist.github.com/carlosdagos/fc805032f833009166a62eb310ca5d38.js"></script>
 
 However I had to desist on that idea because it's hard to have that play along
 with another feature I really like, which comes from Haskell, and it's called
@@ -64,7 +64,7 @@ simple in usage, and in my opinion tremendously powerful.
 
 A simple demo of currying is below:
 
-<script src="https://gist.github.com/charlydagos/29b3281fe0949841aff9b64893c4af48.js"></script>
+<script src="https://gist.github.com/carlosdagos/29b3281fe0949841aff9b64893c4af48.js"></script>
 
 Seeing this behavior it's perhaps easier to understand currying with its
 alternate name: _partial function application_. As you can see,
@@ -96,16 +96,16 @@ identifier in my code referring to a function, and that carries no special
 syntax. For example, PHP _does not_ treat functions as first class citizens
 because you have to point to them with a string or use a closure.
 
-<script src="https://gist.github.com/charlydagos/618b4bdc717b891cc546e666d0c08ca3.js"></script>
+<script src="https://gist.github.com/carlosdagos/618b4bdc717b891cc546e666d0c08ca3.js"></script>
 
 Treating functions as first-class citizens can even vary across different Lisp
 flavors, for example here's a mapping over an array in Clojure:
 
-<script src="https://gist.github.com/charlydagos/ffebbac899dad8c3a367203ceb0ee008.js"></script>
+<script src="https://gist.github.com/carlosdagos/ffebbac899dad8c3a367203ceb0ee008.js"></script>
 
 And in Common Lisp:
 
-<script src="https://gist.github.com/charlydagos/a07fcc34a91245e181c9c0ea1e6f8612.js"></script>
+<script src="https://gist.github.com/carlosdagos/a07fcc34a91245e181c9c0ea1e6f8612.js"></script>
 
 So you can see that they're different. My favorite approach however is to simply
 treat functions like any other identifier. After all, they're the same as
@@ -132,12 +132,12 @@ As a demo of a lambda, here's one of my favorite code snippets. It calculates
 the factorial for any number `n` in linear time. It's in Clojure and ripped
 directly from [_Structure And Interpretation of Computer Programs_](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-11.html#%25_sec_1.2.1).
 
-<script src="https://gist.github.com/charlydagos/8d9ca7f32aa1a1ff10594eefacbb5dea.js"></script>
+<script src="https://gist.github.com/carlosdagos/8d9ca7f32aa1a1ff10594eefacbb5dea.js"></script>
 
 But of course, if you ask me, the **best** language for lambdas is, to date,
 Haskell:
 
-<script src="https://gist.github.com/charlydagos/7ba1e4384527880af498e0fd0567e7e9.js"></script>
+<script src="https://gist.github.com/carlosdagos/7ba1e4384527880af498e0fd0567e7e9.js"></script>
 
 If you can't see it, it's as easy as `\param1 param2 -> ...` where `...` is an
 equation where you manipulate the function arguments to your liking.
@@ -151,7 +151,7 @@ Another tremendously powerful feature found in languages like Scala and Haskell,
 but not many Lisps, is Pattern Matching. Below is a quick (trivial) example of
 how that works:
 
-<script src="https://gist.github.com/charlydagos/b1353b6d7198c08c361814c514b04f4f.js"></script>
+<script src="https://gist.github.com/carlosdagos/b1353b6d7198c08c361814c514b04f4f.js"></script>
 
 Where the `_` (underscore) symbol means "whatever" (otherwise known as a
 _wildcard pattern_). So the method `isCarlos` will only return true for a value
@@ -164,11 +164,11 @@ pattern matching:
 
 _In Haskell:_
 
-<script src="https://gist.github.com/charlydagos/8f3d0c6da834ecb9827c09fe5c1d7bb9.js"></script>
+<script src="https://gist.github.com/carlosdagos/8f3d0c6da834ecb9827c09fe5c1d7bb9.js"></script>
 
 _In Shen:_
 
-<script src="https://gist.github.com/charlydagos/65705dcf094cafb82dc2b1def7ad28f4.js"></script>
+<script src="https://gist.github.com/carlosdagos/65705dcf094cafb82dc2b1def7ad28f4.js"></script>
 
 More on Shen pattern matching [here](http://www.shenlanguage.org/learn-shen/functions/functions_pattern_matching.html).
 
@@ -180,33 +180,33 @@ samples.
 
 Automatic currying, as mentioned, is quite straightforward:
 
-<script src="https://gist.github.com/charlydagos/c64b3e238c6ba48a539e89b483ae7338.js"></script>
+<script src="https://gist.github.com/carlosdagos/c64b3e238c6ba48a539e89b483ae7338.js"></script>
 
 Support for lambdas:
 
-<script src="https://gist.github.com/charlydagos/8b5d883180dadf04edd5f3b837c02b4c.js"></script>
+<script src="https://gist.github.com/carlosdagos/8b5d883180dadf04edd5f3b837c02b4c.js"></script>
 
 There's a higher-order function: `map`. I'll add more with time.
 
-<script src="https://gist.github.com/charlydagos/5b1610f025c6c9cf70df42dba8273a97.js"></script>
+<script src="https://gist.github.com/carlosdagos/5b1610f025c6c9cf70df42dba8273a97.js"></script>
 
 Combining currying with higher order functions, `addFive` is a partial
 application of adding (`+`), with the number 5.
 
-<script src="https://gist.github.com/charlydagos/e674d68f2713dcf572ced1f2312cc8d6.js"></script>
+<script src="https://gist.github.com/carlosdagos/e674d68f2713dcf572ced1f2312cc8d6.js"></script>
 
 Here's that SICP factorial calculation:
 
-<script src="https://gist.github.com/charlydagos/90b87549d2665c6a11ec8c85a5359e83.js"></script>
+<script src="https://gist.github.com/carlosdagos/90b87549d2665c6a11ec8c85a5359e83.js"></script>
 
 And here's a sample of a classic recursive Fibonacci, which has a terrible
 performance, but that's kind of the point of this algorithm:
 
-<script src="https://gist.github.com/charlydagos/73df8722f0e1e7cf652331c947205653.js"></script>
+<script src="https://gist.github.com/carlosdagos/73df8722f0e1e7cf652331c947205653.js"></script>
 
 The language features pattern matching on a primitive level
 
-<script src="https://gist.github.com/charlydagos/c11a61dbf19c9686d7954009ad484539.js"></script>
+<script src="https://gist.github.com/carlosdagos/c11a61dbf19c9686d7954009ad484539.js"></script>
 
 Lastly, this is an example that I really like, and if you're a SICP person
 you'll recognize it. You can check the reference material
@@ -215,7 +215,7 @@ you'll recognize it. You can check the reference material
 The purpose of the example is to show that data can take the form of procedures.
 Effectively, with support for lambdas we can create _pairs_.
 
-<script src="https://gist.github.com/charlydagos/88800cbe7f8ba8b546a4c7cdb763cc34.js"></script>
+<script src="https://gist.github.com/carlosdagos/88800cbe7f8ba8b546a4c7cdb763cc34.js"></script>
 
 This is one of my favorite examples and it is, as the book says, mind-boggling.
 
@@ -236,7 +236,7 @@ Always read the `README`!
 
 <blockquote class="embedly-card" data-card-key="cf9dee0ccfe8485e9df6cf6f4c5065f4" data-card-type="article">
 <h4>
-<a href="https://github.com/charlydagos/bonlang">charlydagos/bonlang</a>
+<a href="https://github.com/carlosdagos/bonlang">carlosdagos/bonlang</a>
 </h4>
 <p>bonlang - Minimalist language created at ZuriHac 2016 in Zurich, CH</p>
 </blockquote>
@@ -279,7 +279,7 @@ excellent work done in most major programming languages.
 - Better runtime error messages.
 - More primitive functions.
 - Importing other modules.
-- [Syntax support for Atom](https://github.com/charlydagos/language-bonlang),
+- [Syntax support for Atom](https://github.com/carlosdagos/language-bonlang),
 is dead easy to get working.
 
 <a href="/images/posts_2016-08-16-atom_syntax.png">
@@ -294,7 +294,7 @@ Saw them recently in a small pub in Karlsruhe!
 
 ## Amendments
 
-As is usual, any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-08-16-bonlang-experimenting-languages.markdown).
+As is usual, any and all amendments to this post can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-08-16-bonlang-experimenting-languages.markdown).
 
 ## Footnotes
 

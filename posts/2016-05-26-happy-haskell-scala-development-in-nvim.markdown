@@ -5,12 +5,12 @@ tags: vim, nvim, development, haskell
 ---
 
 Up until very recently I've been using a
-[very standard Vim installation](https://github.com/charlydagos/setup-my-mac/blob/master/dotfiles/vimrc)
+[very standard Vim installation](https://github.com/carlosdagos/setup-my-mac/blob/master/dotfiles/vimrc)
 on my Mac to develop my shabby software in any language really. But I'm
 centering most of my energies as of late in Scala and Haskell... Haskell and
 Scala... whichever order you'd prefer.
 
-Point is, if you see my [`~/.vimrc`](https://github.com/charlydagos/setup-my-mac/blob/master/dotfiles/vimrc)
+Point is, if you see my [`~/.vimrc`](https://github.com/carlosdagos/setup-my-mac/blob/master/dotfiles/vimrc)
 file, you'll see that amongst other things I'm
 using [`syntastic`](https://github.com/scrooloose/syntastic) which is actually
 quite great. However it's a common complaint that for Scala it's a bit slow.
@@ -62,7 +62,7 @@ package manager will have it.
 
 My `~/.nvimrc` file is below, for your copypasta pleasure.
 
-<script src="https://gist.github.com/charlydagos/ba9b5db4c55cf999f3c0d02088ccb94e.js"></script>
+<script src="https://gist.github.com/carlosdagos/ba9b5db4c55cf999f3c0d02088ccb94e.js"></script>
 
 It's not so different from my original `~/.vimrc` file. It has
 some significant changes however, and they make quite the difference.
@@ -153,7 +153,7 @@ _If anybody wants to give me a gift, a vinyl of this record would be awesome_ ðŸ
 
 ## Amendments
 
-Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-05-26-happy-haskell-scala-development-in-nvim.markdown).
+Any and all amendments to this post can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-05-26-happy-haskell-scala-development-in-nvim.markdown).
 
 ## Footnotes
 

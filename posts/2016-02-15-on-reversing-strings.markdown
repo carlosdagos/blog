@@ -16,11 +16,11 @@ Write a function that given a string input will output a reversed version of the
 
 "Simple enough", I thought naively. So I very confidently wrote
 
-<script src="https://gist.github.com/charlydagos/858ea56b6c2582ffbf43.js"></script>
+<script src="https://gist.github.com/carlosdagos/858ea56b6c2582ffbf43.js"></script>
 
 I even took it to my shell and tested it...
 
-<script src="https://gist.github.com/charlydagos/5b9f4dd3d7184668ee6b.js"></script>
+<script src="https://gist.github.com/carlosdagos/5b9f4dd3d7184668ee6b.js"></script>
 
 I rule!
 
@@ -45,7 +45,7 @@ Let's start by looking at the request in parts.
 
 Seemingly I complied with everything.. Until I go and test the next code...
 
-<script src="https://gist.github.com/charlydagos/5fcd07990e57f412d301.js"></script>
+<script src="https://gist.github.com/carlosdagos/5fcd07990e57f412d301.js"></script>
 
 Broken characters. And in the last example we even get a DIFFERENT character? wtf?
 
@@ -79,7 +79,7 @@ And let's split that string into an array using `str_split`
 
 Because when we run the code, our actual values are...
 
-<script src="https://gist.github.com/charlydagos/d9a29a39fa08d2ec2a22.js"></script>
+<script src="https://gist.github.com/carlosdagos/d9a29a39fa08d2ec2a22.js"></script>
 
 ### So what the hell is a `char` anyway?
 
@@ -89,7 +89,7 @@ Indeed, in the context of php a `char` is a byte. And php is treating everything
 
 But look at that last part of having ran the `str_split`. There's four characters there (25-28) and I have no idea what that is. It _should_ be 🤔. But it's not. So let's take my super haxxor powers and see what's in there in the most haxxor format available: HEXADECIMAL. I shall then use my ol' trusty [`bin2hex`](http://php.net/bin2hex) function.
 
-<script src="https://gist.github.com/charlydagos/2b000273d39731541984.js"></script>
+<script src="https://gist.github.com/carlosdagos/2b000273d39731541984.js"></script>
 
 We're still wondering what the hell a `string` is. Why not just call it `$bytes` instead? Well, you _should_, if you were treating it as such. The problem is that it would look weird because those byte-wise functions almost all talk about `str`. But basically, again, this is for historical reasons. We tend to think of a string as some message that has a meaning. It's not always the case. A `string` is an ordered array[^arrays] of whatever the underlying system considers a `char`. In php this turned out to be a `byte`, [but in Java](https://www.quora.com/Why-is-the-size-of-char-in-Java-2-bytes), or in any other language, this may not be the case.
 
@@ -150,17 +150,17 @@ I did say that php will support any string in any encoding, but not right away. 
 
 Using those functions as a reference and with a very impatient mindset, I just do the ballsy thing and type out a new script, with two functions: one that is simple, using your good'ol `str`-based functions, and another one using our new friends the `mb`-based functions. I also make it a php cli script because I can...
 
-<script src="https://gist.github.com/charlydagos/0c9981aa4e879af00ef3.js"></script>
+<script src="https://gist.github.com/carlosdagos/0c9981aa4e879af00ef3.js"></script>
 
 And after running this on our [favorite shell](https://www.iterm2.com/), we get the output:
 
-<script src="https://gist.github.com/charlydagos/345aec2e12d59a84de83.js"></script>
+<script src="https://gist.github.com/carlosdagos/345aec2e12d59a84de83.js"></script>
 
 Eureka!
 
 **Except no**.
 
-<script src="https://gist.github.com/charlydagos/a1b2306c241e0127703a.js"></script>
+<script src="https://gist.github.com/carlosdagos/a1b2306c241e0127703a.js"></script>
 
 If you highlight the last line, you can see that it didn't rotate the Swiss flag glyph and the Argentina flag glyph. It just returned this shit[^invisible]
 
@@ -194,11 +194,11 @@ We got something implemented for us already... I could cry of excitement!
 **HOLD IT!** First install the `intl` package as best as you can. For me it's running `brew install php70-intl`. It takes a bit, because we're dealing with dependencies, and dependencies suck.
 </div>
 
-<script src="https://gist.github.com/charlydagos/74a53789d26796a0510c.js"></script>
+<script src="https://gist.github.com/carlosdagos/74a53789d26796a0510c.js"></script>
 
 And, at long last...
 
-<script src="https://gist.github.com/charlydagos/a7211ca7ead7a179494a.js"></script>
+<script src="https://gist.github.com/carlosdagos/a7211ca7ead7a179494a.js"></script>
 
 ## Lessons
 
@@ -231,7 +231,7 @@ _¿Qué puedo hacer...? :)_
 
 ## Amendments
 
-You can find any and all amendments to this post [here](https://github.com/charlydagos/blog/commits/master/posts/2016-02-15-on-reversing-strings.markdown).
+You can find any and all amendments to this post [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-02-15-on-reversing-strings.markdown).
 
 ## Footnotes
 

@@ -34,7 +34,7 @@ As I normally do, I went to look at the guts of the monster. What I found was mo
 
 First I checked the [Content Type](https://www.w3.org/Protocols/rfc1341/4_Content-Type.html) of the API[^fakedataagain].
 
-<script src="https://gist.github.com/charlydagos/0e680d66c3e82fbccf39.js"></script>
+<script src="https://gist.github.com/carlosdagos/0e680d66c3e82fbccf39.js"></script>
 
 The line `Content-Type: application/json; charset=utf-8` is pretty explicit telling us that our contents are in `UTF-8`.
 
@@ -58,7 +58,7 @@ Now these bytes are stored in the database, but the database thinks these are `I
 
 So we presented the problem and one of the devs said: "I can fix it!", and went ahead to add the lines...
 
-<script src="https://gist.github.com/charlydagos/c26c434033d58101366b.js"></script>
+<script src="https://gist.github.com/carlosdagos/c26c434033d58101366b.js"></script>
 
 Fair enough, right?
 
@@ -116,7 +116,7 @@ When you `foldToISO`, you're ensuring (at least in most cases), that you're goin
 
 This way, we say "map `ű` to `u`", because we know that `u` _is_ in `ISO-8859-1`, and then therefore `iconv` can handle it accordingly. It won't have to think much about it, though, because in both cases it's `u = 0x75`[^anothermapping].
 
-<script src="https://gist.github.com/charlydagos/87439f1f120dd2df8df4.js"></script>
+<script src="https://gist.github.com/carlosdagos/87439f1f120dd2df8df4.js"></script>
 
 Now, when we executed that and looked at the database, we saw..
 
@@ -197,7 +197,7 @@ _Thanks for the gift :)_
 
 ## Amendments
 
-Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-02-20-folding-vs-iconv.markdown).
+Any and all amendments to this post can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-02-20-folding-vs-iconv.markdown).
 
 ## Footnotes
 

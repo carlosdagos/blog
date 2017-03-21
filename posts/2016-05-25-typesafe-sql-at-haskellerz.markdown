@@ -39,7 +39,7 @@ _Also, I don't think the lower angle favors my [papada](https://en.wikipedia.org
 
 ## Further reading
 
-- You can see the code and slides in my github: [https://github.com/charlydagos/haskell-sql-edsl-demo](https://github.com/charlydagos/haskell-sql-edsl-demo).
+- You can see the code and slides in my github: [https://github.com/carlosdagos/haskell-sql-edsl-demo](https://github.com/carlosdagos/haskell-sql-edsl-demo).
 - You can also browse through the HaskellerZ repo, hosted by Simon: [https://github.com/meiersi/HaskellerZ/](https://github.com/meiersi/HaskellerZ/).
 - You should join! [https://www.meetup.com/HaskellerZ/](https://www.meetup.com/HaskellerZ/)
 
@@ -51,4 +51,4 @@ They played in Basel and it was amazing
 
 ## Amendments
 
-Any and all amendments can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-05-25-typesafe-sql-at-haskellerz.markdown).
+Any and all amendments can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-05-25-typesafe-sql-at-haskellerz.markdown).

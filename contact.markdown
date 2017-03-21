@@ -21,7 +21,7 @@ my long-term handle on websites, so perhaps these will break at some point. I
 hardly make my social media about computers, but I really like music and
 surfing, so I (re)post a lot about that.
 
-- [**Github**](https://github.com/charlydagos) - Some code.
+- [**Github**](https://github.com/carlosdagos) - Some code.
 - [**LinkedIn**](https://www.linkedin.com/in/carlos-dagostino) - ¯\\\_(ツ)\_/¯
 - [**Instagram**](https://www.instagram.com/charlydagos) - Postureo.
 - [**Twitter**](https://twitter.com/charlydagos) - Music, maybe some funnies.

@@ -40,7 +40,7 @@ I used it for a couple of years. I then started to use tmux because I found
 it easier to configure, and it adapted itself quite easily to Vim shortcuts.
 
 I did have a slight learning curve for it, but thanks to the program lending
-itself to [plugins](https://github.com/charlydagos/setup-my-mac/blob/master/dotfiles/tmux/tmux.conf#L40-L51),
+itself to [plugins](https://github.com/carlosdagos/setup-my-mac/blob/master/dotfiles/tmux/tmux.conf#L40-L51),
 I had a bit of an easier time adjusting.
 
 At this point I was using `vi-style` keystrokes to move the cursor around
@@ -137,7 +137,7 @@ my windows using the keyboard.
 
 In other \*nix systems there's plenty of other cool, free, tools to be used,
 so if you're not on OS X then look around and
-[send me a tweet](https://twitter.com/charlydagos) or something!
+[send me a tweet](https://twitter.com/carlosdagos) or something!
 
 ## Listening to
 
@@ -156,7 +156,7 @@ some quality music, as they have done so effecitively and wonderfully thus far._
 
 ## Amendments
 
-Any and all amendments to this post can be found [here](https://github.com/charlydagos/blog/commits/master/posts/2016-07-01-nowhere-near-the-mouse.markdown).
+Any and all amendments to this post can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2016-07-01-nowhere-near-the-mouse.markdown).
 
 ## Footnotes
 
