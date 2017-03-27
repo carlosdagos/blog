@@ -26,7 +26,7 @@ and surfing, so I (re)post a lot about that.
 
 - [**Github**](https://github.com/carlosdagos) - Some code.
 - [**LinkedIn**](https://www.linkedin.com/in/carlos-dagostino) - ¯\\\_(ツ)\_/¯
-- [**Instagram**](https://www.instagram.com/charlydagos) - Postureo.
+- [**Instagram**](https://www.instagram.com/carlosdagos) - Postureo.
 - [**Twitter**](https://twitter.com/charlydagos) - Music, maybe some funnies.
 - [**Last.fm**](http://www.last.fm/user/charlydagos) - Music.
 
