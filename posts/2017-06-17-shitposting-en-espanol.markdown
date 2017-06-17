@@ -187,8 +187,7 @@ mías.
 
 ## Cambios a este post
 
-Como siempre, pongo un enlace al historial de este fichero. [Aquí](amendments).
-
+Como siempre, pongo un enlace al historial de este fichero. [Aquí](https://github.com/carlosdagos/blog/commits/bbe275dbc3a7f87d4ff72b3f002bda8bc95ab033/posts/2017-06-17-shitposting-en-espanol.markdown).
 
 ## Footnotes
 
