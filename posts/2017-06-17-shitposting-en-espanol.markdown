@@ -16,13 +16,13 @@ tiempo, o cree una Part 2, o algo._
 Llevo un tiempo (tiempazo) sin escribir, tras un año bastante movido lleno de
 movidas, y también frustraciones.
 
-De las muchas frustraciones que se tiene en esta vida, donde más me las he 
-encontrado ha sido trabajando en proyectos variados con muchas personas con un 
+De las muchas frustraciones que se tiene en esta vida, donde más me las he
+encontrado ha sido trabajando en proyectos variados con muchas personas con un
 alto nivel (en otras palabras: _"rock stars"_ del momento). Algunas de
-estas personas demostraban patrones de comportamiento similares unos entre los 
-otros, y yo, pensando que les debía respeto, los aguantaba. Pero no, la gente 
-demuestra los siguientes comportamientos no son dignos de aguantar. 
-Obviamente no digo que todos los de _cracks_ sean así, pero algunos tienen 
+estas personas demostraban patrones de comportamiento similares unos entre los
+otros, y yo, pensando que les debía respeto, los aguantaba. Pero no, la gente
+demuestra los siguientes comportamientos no son dignos de aguantar.
+Obviamente no digo que todos los de _cracks_ sean así, pero algunos tienen
 un ego que no pasa ni por puerta doble.
 
 ##  Comportamientos de un/una imbécil
@@ -32,9 +32,9 @@ cosas, así que en cierto modo lo siguiente es autorreflexivo._
 
 ### No contesta la pregunta
 
-Situación: Estás aprendiendo algo... digamos Javascript. Y te encuentras que 
+Situación: Estás aprendiendo algo... digamos Javascript. Y te encuentras que
 la función de jQuery `$.ajax` por defecto es asíncrona (claro, de ahí la primera
-A, chato/a), pero estás haciendo pruebas y no te quieres rayar pensando en 
+A, chato/a), pero estás haciendo pruebas y no te quieres rayar pensando en
 comportamiento asíncrono, Promises, y whatever the fuck, así que te vas con tus
 compis y preguntas
 
@@ -61,8 +61,8 @@ Responder con cualquier variación de éstas indica en cierto modo que crees que
 la persona que hace la pregunta no sabe lo que hace, o que no ha mirado la
 documentación, cuando la realidad es que la mayoría de las veces sólo queremos
 terminar alguna tarea, y todos tenemos nuestros días donde algo que estaba en
-la documentación se nos pasa totalmente por alto. Y es cierto que `$.ajax` no 
-ha de ser usada de manera síncrona, y es cierto que está en la docu, pero una 
+la documentación se nos pasa totalmente por alto. Y es cierto que `$.ajax` no
+ha de ser usada de manera síncrona, y es cierto que está en la docu, pero una
 mejor respuesta hubiese sido[^hacemildejavascript]
 
 <div class="success">
@@ -81,14 +81,14 @@ con _señal_, y no con _ruido_.
 
 #### Sin embargo
 
-Lo que también es cierto es que a veces no hacemos las preguntas correctas, 
+Lo que también es cierto es que a veces no hacemos las preguntas correctas,
 y para ello creo que lo mejor es seguir [las recomendaciones de StackOverflow](https://stackoverflow.com/help/how-to-answer),
 ellos saben cómo va lo de Q&A mejor que el 99% del resto del mundo.
 
 ### Piensa que todo el mundo ha de pasarlo igual de mal que él/ella alguna vez lo pasó
 
 Situación: En mi primer trabajo, cuando entré, un mozo de 21 años, iluso
-e inocente, teníamos un sistema ya complejo que había crecido a base de 
+e inocente, teníamos un sistema ya complejo que había crecido a base de
 necesidad y no de planificación. Creo que sólo las personas que lo han pasado
 mal pueden entender esa última frase.
 
@@ -104,22 +104,22 @@ nunca llegó a conocer este tipo de pistoleo. Claro que la cosa mejoró al poco
 tiempo: instalando _svn_ y trabajando en un solo branch: _master_. Algo es algo,
 supongo.
 
-Tardaron años en llegar a escribir código en branches y a usar algo más sensato 
-como _git_, pero durante años lo pasamos mal, y al pasarlo mal algunos 
-comenzamos a adoptar una postura de "si yo lo he pasado mal, entonces todos 
+Tardaron años en llegar a escribir código en branches y a usar algo más sensato
+como _git_, pero durante años lo pasamos mal, y al pasarlo mal algunos
+comenzamos a adoptar una postura de "si yo lo he pasado mal, entonces todos
 los nuevos que entren también han de pasarlo mal, porque mira qué bien salí
 yo..."
 
 **Incorrecto**. No fue hasta después de un tiempo y madurez que llegué a darme
-cuenta que el trabajo que hacemos con el tiempo, lo pasemos mal o no, ha de 
-ayudar a quien viene detrás nuestro. Creo que el comportamiento descrito 
-anteriormente fomenta la exclusividad y no ayuda a la industria por un lado, 
+cuenta que el trabajo que hacemos con el tiempo, lo pasemos mal o no, ha de
+ayudar a quien viene detrás nuestro. Creo que el comportamiento descrito
+anteriormente fomenta la exclusividad y no ayuda a la industria por un lado,
 y a nuestros equipos por otro.
 
 Cosas como documentación, código de pruebas, code reviews, _pair programmings_,
-meetups donde enseñamos a los demás lo que hemos hecho y les contamos nuestras 
-batallas, etc, son todas cosas que dicen "Yo ya me peleé con esto para que 
-ustedes no tengan que hacerlo." Así vamos todos para adelante más rápido 
+meetups donde enseñamos a los demás lo que hemos hecho y les contamos nuestras
+batallas, etc, son todas cosas que dicen "Yo ya me peleé con esto para que
+ustedes no tengan que hacerlo." Así vamos todos para adelante más rápido
 y mejor.
 
 ... y más relajados, que están muy nerviosos todos:
@@ -129,7 +129,7 @@ y mejor.
 
 ### Se cree estar por encima de estándares de la industria
 
-Lo típico: Existe un fallo un tanto rarito por ahí pero que tiene solución 
+Lo típico: Existe un fallo un tanto rarito por ahí pero que tiene solución
 fácil a priori. Entonces viene el pistolero de turno con acceso de superusuario
 y decide que va a cambiar el código de tal modo:
 
@@ -147,13 +147,13 @@ y te encuentras ahí modo
 Este tipo de comportamiento es inaceptable y demuestra varios síntomas
 bastante preocupantes:
 
-- ¿Por qué alguien pudo en primer lugar hacer eso? Nadie es demasiado bueno 
+- ¿Por qué alguien pudo en primer lugar hacer eso? Nadie es demasiado bueno
 para un sistema de staging.
-- ¿Por qué alguien pudo subir directo a master? Por defecto este branch ha 
+- ¿Por qué alguien pudo subir directo a master? Por defecto este branch ha
 de ser protegido, nadie es demasiado bueno como para cambiar un sistema del que
 depende nuestro salario así como así.
 - Si alguien tenía derechos para subir a master, ¿no tenía mejor juicio?
-Las versiones de producción son como son, con sus fallos y todo. Cuando vamos 
+Las versiones de producción son como son, con sus fallos y todo. Cuando vamos
 a subir a producción tenemos que tener una certeza máxima de lo que hacemos y
 de lo que cambiamos.
 
@@ -169,25 +169,25 @@ _Hasta aquí llego hoy. Quizás después actualice. Maybe._
 porque uso evil mode. O sea que estoy haciendo trampa. Hasta que no me duelan
 los meñiques no diré que uso Emacs de manera seria.
 - Estoy usando NixOS y es bastante divertido -- aunque a veces poco práctico, y
-la documentación está regular. A veces el precio de ser hipster es caro :) - 
+la documentación está regular. A veces el precio de ser hipster es caro :) -
 Pero hey, que estoy contento.
-- Me compré un monitor Ultrawide de 34 pulgadas. Es enorme. Demasiado. Pero, 
+- Me compré un monitor Ultrawide de 34 pulgadas. Es enorme. Demasiado. Pero,
 ¿y lo bonito que queda en un escritorio?
-- Me terminé el último Zelda (Breath of the Wild) tras haber consumido los 
+- Me terminé el último Zelda (Breath of the Wild) tras haber consumido los
 últimos dos meses de mi vida. Juegazo: 100% recomendado.
 
 ## Escuchando
 
 Esta gente es de Sydney... _¡Sydney!_, y parece un grupo de los 80 en Manchester
-que viajó al futuro para salvarnos de la basura actual. Cracks. A veces uno que 
+que viajó al futuro para salvarnos de la basura actual. Cracks. A veces uno que
 otro guitarreo me recuerda a R.E.M. y a veces a The Smiths... no sé, movidas
-mías. 
+mías.
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A2sDDN9iE5uBjtrujYHC1KL" width="100%" height="400" frameborder="0" allowtransparency="true"></iframe>
 
 ## Cambios a este post
 
-Como siempre, pongo un enlace al historial de este fichero. [Aquí](https://github.com/carlosdagos/blog/commits/bbe275dbc3a7f87d4ff72b3f002bda8bc95ab033/posts/2017-06-17-shitposting-en-espanol.markdown).
+Como siempre, pongo un enlace al historial de este fichero. [Aquí](https://github.com/carlosdagos/blog/commits/master/posts/2017-06-17-shitposting-en-espanol.markdown).
 
 ## Footnotes
 

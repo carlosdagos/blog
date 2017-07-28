@@ -197,6 +197,10 @@ Okonokos vinyl, and it's amazing, to say the least._
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1Ke9mDP94GGilHRVfUS1qn" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
 
+## Amendments
+
+As always, any and all changes to this post are [here](https://github.com/carlosdagos/blog/commits/master/posts/2017-07-28-learning-to-love-nix.markdown).
+
 ## Footnotes
 
 [^letsnotkidourselves]: You don't.
