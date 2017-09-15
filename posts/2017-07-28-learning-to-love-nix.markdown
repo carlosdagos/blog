@@ -23,7 +23,7 @@ and folks there are not just smart, but also very professional and quite cool.
 
 So as I sat down on my first day, I was given a CD that said "Ubun..", or
 something of the matter, as I didn't bother reading the rest. I had a USB drive
-and my laptop, and had to chose what OS I was going to install on my work
+and my laptop, and had to choose what OS I was going to install on my work
 machine. I had narrowed it down to Arch Linux and NixOS. I chose NixOS, in a
 kind of "let's try it out" mentality.
 
@@ -98,7 +98,7 @@ gave me a list of roughly what I wanted, and then took to the trusty
 
 But then I thought, "Wait..."
 
-##### "I am sick and tired of all this motherf'ing ad-hoc software on my mother'fing machine"
+##### "I am sick and tired of all this motherf'ing ad-hoc software on my motherf'ing machine"
 
 <img src="/images/sick_and_tired.jpg" alt="Snakes on a Plane sucks but it has its moments" width="420" />
 
