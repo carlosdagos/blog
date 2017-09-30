@@ -29,7 +29,7 @@ kind of "let's try it out" mentality.
 
 Now I have previously badmouthed NixOS on Twitter:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I&#39;m living on a 15GB budget here :/</p>&mdash; Carlos D (@charlydagos) <a href="https://twitter.com/charlydagos/status/837015407173242883">March 1, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I&#39;m living on a 15GB budget here :/</p>&mdash; Carlos D (@carlos_dagos_) <a href="https://twitter.com/carlos_dagos_/status/837015407173242883">March 1, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Yes, that right there is me badmouthing stuff. My humor is uncomprehended, but
