@@ -163,7 +163,7 @@ _That first take of There Is A Light... is just so great._
 
 ## Amendments
 
-As always, any and all changes to this post are [here]().
+As always, any and all changes to this post are [here](https://github.com/carlosdagos/blog/commits/master/posts/2017-10-29-lambdaworld-andalusia-australia.markdown).
 
 ## Footnotes
 
