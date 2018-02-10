@@ -74,6 +74,12 @@ food we had a the RavenPack booth:
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">And awesome cheese too! <a href="https://t.co/YpqGqsjLw9">https://t.co/YpqGqsjLw9</a></p>&mdash; Alejandro || Serras (@trupill) <a href="https://twitter.com/trupill/status/923618075915767808?ref_src=twsrc%5Etfw">26 de octubre de 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+*Update 2018:*
+
+The organizers were nice enough to record it and post it:
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/AwBWqm4bGSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ## The bad
 
 #### (Keynote) Profunctor Optics - Bartosz Milewski
