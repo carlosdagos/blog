@@ -204,7 +204,7 @@ _Of course I'm still listening to King Gizzard:_
 
 ## Amendments
 
-All amendments to this post can be found [here]().
+All amendments to this post can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2018-03-28-one-year-common-lisp-developer-part-2-the-bad.md).
 
 ## Footnotes
 

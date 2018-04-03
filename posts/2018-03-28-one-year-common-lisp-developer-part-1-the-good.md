@@ -313,7 +313,7 @@ the cyborg Han-Tyumi, whose only wish is to vomit and die._
 
 ## Amendments
 
-Amendments to this page can be found [here]().
+Amendments to this page can be found [here](https://github.com/carlosdagos/blog/commits/master/posts/2018-03-28-one-year-common-lisp-developer-part-1-the-good.md).
 
 ## Footnotes
 
