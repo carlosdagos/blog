@@ -311,9 +311,11 @@ header .nav-list-item a {
 		font-size: 20px
 }
 .post-content h4,
-.post-content h5,
-.post-content h6 {
+.post-content h5 {
     font-size: 18px
+}
+.post-content h6 {
+    font-size: 15px
 }
 .post-content a {
     color: #42b983
@@ -438,6 +440,34 @@ header .nav-list-item a {
     font-weight: 100;
     text-align: center;
     background-color: #a94442;
+    font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+}
+.post-content .link {
+    position: relative;
+    margin: 2em 0;
+    padding: 12px 24px 12px 30px;
+    border-left: 4px solid #99D04A;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #f8f8f8;
+}
+.post-content .link br {
+    display: visible;
+}
+.post-content .link:before {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    content: "🔗";
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: #666;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    text-align: center;
+    background-color: #8DEB13;
     font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
 }
 code,
