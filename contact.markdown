@@ -25,6 +25,7 @@ point. I hardly make my social media about computers, but I really like music
 and surfing, so I (re)post a lot about that.
 
 - [**Github**](https://github.com/carlosdagos) - Some code.
+- [**Keybase**](https://keybase.io/carlosdagos) - Find my PGP key here.
 - [**LinkedIn**](https://www.linkedin.com/in/carlos-dagostino) - ¯\\\_(ツ)\_/¯
 - [**Instagram**](https://www.instagram.com/carlosdagos) - Postureo.
 - [**Twitter**](https://twitter.com/carlos_dagos_) - Music, maybe some funnies.
@@ -32,7 +33,7 @@ and surfing, so I (re)post a lot about that.
 
 ## Drop me a line
 
-<a href="mailto:m@cdagostino.io">m@cdagostino.io</a> (<a target="_blank" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xE7249D28C6D2BCB4">0xC6D2BCB4</a>)
+[m@cdagostino.io](E7249D28C6D2BCB4) ([0xE7249D28C6D2BCB4](https://keybase.io/carlosdagos))
 
 ### Footnotes
 
