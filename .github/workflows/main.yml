@@ -1,0 +1,29 @@
+name: CI
+
+# Trigger the workflow on push only for the master branch
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-haskell@v1.1
+
+    - uses: actions/cache@v1
+      name: Cache ~/.stack
+      with:
+        path: ~/.stack
+        key: ${{ runner.os }}-blog-stack
+
+    - name: build
+      run: |
+        stack build
+
+    - name: build site
+      run: |
+        stack exec site build
