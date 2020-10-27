@@ -28,19 +28,9 @@ main = hakyll $ do
                  >>= loadAndApplyTemplate "templates/default.html" postCtx
                  >>= relativizeUrls
 
-    create ["archive.html"] $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
-            let archiveCtx =
-                    listField "posts" postCtx (return posts) <>
-                    constField "title" "Archives"            <>
-                    defaultContext
+    create ["archive.html"] (usingArchivePage "Archive")
 
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-                >>= relativizeUrls
+    create ["error.html"] (usingArchivePage "404 - You probably took a wrong turn somewhere")
 
     match "index.html" $ do
         route idRoute
@@ -57,6 +47,26 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateCompiler
+
+    match "keybase.txt" $ do
+         route   idRoute
+         compile copyFileCompiler
+
+    where
+        -- Create a page from the `archive.html` page
+        usingArchivePage title = do
+            route idRoute
+            compile $ do
+                posts <- recentFirst =<< loadAll "posts/*"
+                let archiveCtx =
+                        listField "posts" postCtx (return posts) <>
+                        constField "title" title                 <>
+                        defaultContext
+
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+                    >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                    >>= relativizeUrls
 
 
 --------------------------------------------------------------------------------
