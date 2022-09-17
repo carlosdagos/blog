@@ -88,7 +88,9 @@ myCompiler =
 myTransform :: Pandoc -> Pandoc
 myTransform p@(Pandoc meta blocks) = (Pandoc meta (ert:blocks))
   where
-    ert = Para [ SmallCaps [Str "[ERT: ", Str $ timeEstimateString p <> "]"] ]
+    ert = Div
+            ("ert", [], [])
+            [ Para [ SmallCaps [ Str "Estimated reading time: ", Strong  [ Str $ timeEstimateString p ] ] ] ]
 
     timeEstimateString :: Pandoc -> T.Text
     timeEstimateString = toClockString . timeEstimateSeconds
